@@ -13,8 +13,11 @@
 		5B16B10B288F149700AF42D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B16B10A288F149700AF42D9 /* Assets.xcassets */; };
 		5B16B10E288F149700AF42D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B16B10C288F149700AF42D9 /* LaunchScreen.storyboard */; };
 		5B16B118288F169D00AF42D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B117288F169D00AF42D9 /* HomeViewController.swift */; };
-		5B16B11C288F1AAA00AF42D9 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B11B288F1AAA00AF42D9 /* TargetType.swift */; };
-		5B16B11E288F1ABA00AF42D9 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B11D288F1ABA00AF42D9 /* BaseAPI.swift */; };
+		5B16B128289032BC00AF42D9 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B127289032BC00AF42D9 /* BaseAPI.swift */; };
+		5B16B12A289032D900AF42D9 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B129289032D900AF42D9 /* TargetType.swift */; };
+		5B16B12C2890330200AF42D9 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B12B2890330200AF42D9 /* BaseResponse.swift */; };
+		5B16B12E289033A200AF42D9 /* ExercisesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B12D289033A200AF42D9 /* ExercisesAPI.swift */; };
+		5B16B130289033C900AF42D9 /* ExercisesNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B12F289033C900AF42D9 /* ExercisesNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +29,11 @@
 		5B16B10D288F149700AF42D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B16B10F288F149700AF42D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B16B117288F169D00AF42D9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5B16B11B288F1AAA00AF42D9 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
-		5B16B11D288F1ABA00AF42D9 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		5B16B127289032BC00AF42D9 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		5B16B129289032D900AF42D9 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		5B16B12B2890330200AF42D9 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		5B16B12D289033A200AF42D9 /* ExercisesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesAPI.swift; sourceTree = "<group>"; };
+		5B16B12F289033C900AF42D9 /* ExercisesNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesNetworking.swift; sourceTree = "<group>"; };
 		9AFD0CE79DFA57C43AE6F0DD /* Pods-BFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFit.debug.xcconfig"; path = "Target Support Files/Pods-BFit/Pods-BFit.debug.xcconfig"; sourceTree = "<group>"; };
 		CEA92050C8DACEB3A8BDED1E /* Pods_BFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,7 +79,7 @@
 		5B16B100288F149500AF42D9 /* BFit */ = {
 			isa = PBXGroup;
 			children = (
-				5B16B119288F1A8500AF42D9 /* NetworkLayer */,
+				5B16B1242890325F00AF42D9 /* NetworkLayer */,
 				5B16B115288F167100AF42D9 /* Views */,
 				5B16B101288F149500AF42D9 /* AppDelegate.swift */,
 				5B16B103288F149500AF42D9 /* SceneDelegate.swift */,
@@ -100,21 +106,32 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		5B16B119288F1A8500AF42D9 /* NetworkLayer */ = {
+		5B16B1242890325F00AF42D9 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				5B16B11A288F1A9700AF42D9 /* Base */,
+				5B16B1262890327500AF42D9 /* Exercises */,
+				5B16B1252890326E00AF42D9 /* Base */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
-		5B16B11A288F1A9700AF42D9 /* Base */ = {
+		5B16B1252890326E00AF42D9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				5B16B11B288F1AAA00AF42D9 /* TargetType.swift */,
-				5B16B11D288F1ABA00AF42D9 /* BaseAPI.swift */,
+				5B16B127289032BC00AF42D9 /* BaseAPI.swift */,
+				5B16B129289032D900AF42D9 /* TargetType.swift */,
+				5B16B12B2890330200AF42D9 /* BaseResponse.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		5B16B1262890327500AF42D9 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				5B16B12D289033A200AF42D9 /* ExercisesAPI.swift */,
+				5B16B12F289033C900AF42D9 /* ExercisesNetworking.swift */,
+			);
+			path = Exercises;
 			sourceTree = "<group>";
 		};
 		B7E9232F8A3B4612CE2D63E6 /* Pods */ = {
@@ -123,7 +140,6 @@
 				9AFD0CE79DFA57C43AE6F0DD /* Pods-BFit.debug.xcconfig */,
 				3B987B537A5AC09F2F60DAD0 /* Pods-BFit.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -241,11 +257,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B16B11C288F1AAA00AF42D9 /* TargetType.swift in Sources */,
+				5B16B12A289032D900AF42D9 /* TargetType.swift in Sources */,
 				5B16B102288F149500AF42D9 /* AppDelegate.swift in Sources */,
+				5B16B128289032BC00AF42D9 /* BaseAPI.swift in Sources */,
+				5B16B12C2890330200AF42D9 /* BaseResponse.swift in Sources */,
 				5B16B104288F149500AF42D9 /* SceneDelegate.swift in Sources */,
+				5B16B12E289033A200AF42D9 /* ExercisesAPI.swift in Sources */,
 				5B16B118288F169D00AF42D9 /* HomeViewController.swift in Sources */,
-				5B16B11E288F1ABA00AF42D9 /* BaseAPI.swift in Sources */,
+				5B16B130289033C900AF42D9 /* ExercisesNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
