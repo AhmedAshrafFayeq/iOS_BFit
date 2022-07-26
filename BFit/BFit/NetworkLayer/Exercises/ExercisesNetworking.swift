@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 enum ExercisesNetworking {
-    case getExcercisesData
+    case getExercisesData
 }
 
 extension ExercisesNetworking: TargetType{
@@ -22,21 +22,21 @@ extension ExercisesNetworking: TargetType{
 
     var path: String {
         switch self {
-        case .getExcercisesData:
-            return ""
+        case .getExercisesData:
+            return "exercise/?format=json"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .getExcercisesData:
+        case .getExercisesData:
             return .get
         }
     }
     
     var task: Task {
         switch self {
-        case .getExcercisesData:
+        case .getExercisesData:
             return .requestPlain
         }
     }

@@ -10,7 +10,7 @@ import Alamofire
 
 class BaseApi<T:TargetType> {
     
-    func fetchData<M: Decodable>(target: T, responseClass: M.Type, completion: @escaping (Result<M?, AFError>)-> Void){
+    func fetchData<M: Decodable>(target: T, responseClass: M.Type, completion: @escaping (Swift.Result<M?, AFError>)-> Void){
         let method  = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
         let headers = Alamofire.HTTPHeaders(target.headers ?? [:])
         let params  = buildParams(task: target.task)
