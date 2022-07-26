@@ -6,23 +6,23 @@
 //
 
 import UIKit
-import Alamofire
 
 class HomeViewController: UIViewController {
-
+    
+    //MARK: - Variables
+    var exerciseViewModel: ExerciseViewModelProtocol?
+    
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        
-        let headers: HTTPHeaders = [
-            "Content-Type": "application/json",
-            "Authorization": "Token 0031f15438ad2993cf4d6c176be01a9852dab94c"
-        ]
-
-        AF.request("https://wger.de/api/v2/login/?format=json", headers: headers).responseJSON { response in
-           //Parse or print your response.
-            print(response)
-        }
+        view.backgroundColor = .systemBackground
+        configureViewModel()
+    }
+    
+    //MARK: - View Model Configuration
+    private func configureViewModel() {
+        exerciseViewModel = ExerciseViewModel()
+        exerciseViewModel?.getExerciseData()
     }
     
 }
