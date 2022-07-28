@@ -37,8 +37,15 @@ class HomeViewController: UIViewController {
     private func setupView() {
         view.backgroundColor = .systemBackground
         view.addSubview(tableView)
+        configureHeaderView()
         tableView.delegate = self
         configureViewModel()
+    }
+    
+    //MARK: - Customize Header  for the TableView
+    func configureHeaderView() {
+        let  headerView = ExerciseHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height / 7))
+        tableView.tableHeaderView = headerView
     }
     
     //MARK: - View Model Configuration
@@ -53,20 +60,20 @@ class HomeViewController: UIViewController {
     
     //MARK: - Binding TableView
     func bindTableViewWithExercise() {
-        var list = [HomeModel]()
-        var behaviourSubject = BehaviorSubject(value: list)
+        var homeModelList = [HomeModel]()
+        var behaviourSubject = BehaviorSubject(value: homeModelList)
         
         Observable.combineLatest(exerciseViewModel!.exerciseBehaviorSubject, exerciseViewModel!.exerciseImageBehaviorSubject).map { exercises, images in
-            for (e1, e2) in zip(exercises, images).sorted(by: { $0.0.exerciseBase == $1.0.exerciseBase }) {
-                list.append(HomeModel(exercise: e1, image: e2))
+            let homeModelSortedList = zip(exercises, images).sorted(by: { $0.0.exerciseBase == $1.0.exerciseBase })
+            for (exercise, image) in  homeModelSortedList {
+                homeModelList.append(HomeModel(exercise: exercise, image: image))
             }
-            return list
+            return homeModelList
         }.bind(to: behaviourSubject).disposed(by: disposeBag)
         
-        behaviourSubject = BehaviorSubject(value: list)
+        behaviourSubject = BehaviorSubject(value: homeModelList)
 
         behaviourSubject.bind(to: tableView.rx.items(cellIdentifier: ExerciseTableViewCell.identifier, cellType: ExerciseTableViewCell.self)) { row ,item , cell in
-            print("hey \(item.exercise.name) hey \(item.image.id)")
             cell.configureCell(model: item)
         }.disposed(by: disposeBag)
         
@@ -90,7 +97,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController : UITableViewDelegate {
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 70
     }
     
 }

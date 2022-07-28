@@ -59,10 +59,10 @@ class ExerciseTableViewCell: UITableViewCell {
     private func configureConstrains(){
         NSLayoutConstraint.activate([
             
-            exerciseImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10),
+            exerciseImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 20),
             exerciseImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            exerciseImageView.widthAnchor.constraint(equalToConstant: 80),
-            exerciseImageView.heightAnchor.constraint(equalToConstant: 80),
+            exerciseImageView.widthAnchor.constraint(equalToConstant: 50),
+            exerciseImageView.heightAnchor.constraint(equalToConstant: 50),
             
             exerciseNameLabel.centerYAnchor.constraint(equalTo: exerciseImageView.centerYAnchor),
             exerciseNameLabel.leadingAnchor.constraint(equalTo: exerciseImageView.trailingAnchor, constant: 20),
@@ -76,9 +76,11 @@ class ExerciseTableViewCell: UITableViewCell {
     func configureCell(model: HomeModel){
         self.exerciseNameLabel.text = model.exercise.name
         if let url = URL(string: model.image.image) {
+//            imgView.sd_setShowActivityIndicatorView(true)
+//            imgView.sd_setIndicatorStyle(.gray)
             self.exerciseImageView.sd_setImage(with: url, completed: nil)
         }else {
-            self.exerciseImageView.image = UIImage(systemName: "note.text")
+            self.exerciseImageView.image = UIImage(named: "placeholder")
         }
     }
 }
