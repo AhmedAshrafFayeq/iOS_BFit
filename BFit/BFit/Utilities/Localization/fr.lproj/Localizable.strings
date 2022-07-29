@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  BFit
+
+  Created by Ahmed Fayeq on 29/07/2022.
+  
+*/
+
+
+/* Header View */
+"TOP_EXERCISES_LABEL_TITLE" = "Meilleurs Exercices";
+
+
+/* Settins View Controller*/
+"SETTINGS_TITLE" = "Réglages";
+"CHANGE_LANGUAGE" = "Changer de langue";
+"CHOOSE_LANGUAGE" = "Choisissez une langue pour l'application BFit";
