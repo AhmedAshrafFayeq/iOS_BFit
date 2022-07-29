@@ -35,32 +35,20 @@ class ExerciseImageCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError()
     }
-    //MARK:- Layouts / Constraints
+    //MARK: - Layouts / Constraints
     private func setupLayouts(){
         contentView.addSubview(exerciseImageView)
-        
-        contentView.layer.shadowColor = UIColor.black.cgColor
-        contentView.layer.shadowOffset = .zero
-        contentView.layer.cornerRadius = 12
-        contentView.layer.shadowRadius = 10
-        contentView.layer.shadowOpacity = 0.3
+        contentView.addShadowToView()
     }
     
     private func ConfigureConstraints(){
         exerciseImageView.frame = contentView.bounds
     }
     
-    //MARK:- Cell Configuration with Models
+    //MARK: - Cell Configuration with Models
     public func configureCell(image: String) {
-        
-        if let url = URL(string: image) {
-//            imgView.sd_setShowActivityIndicatorView(true)
-//            imgView.sd_setIndicatorStyle(.gray)
-            self.exerciseImageView.sd_setImage(with: url, completed: nil)
-        }else {
-            self.exerciseImageView.image = UIImage(named: "placeholder")
-        }
-        
+        exerciseImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        exerciseImageView.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: "placeholder"))
     }
     
 }

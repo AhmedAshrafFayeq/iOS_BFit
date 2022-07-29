@@ -114,7 +114,6 @@ class ExerciseDetailViewController: UIViewController {
     
     //MARK: - Layouts and Cosntraints
     private func setupView() {
-        
         view.addSubview(scrollView)
         scrollView.addSubview(scrollContentView)
         scrollContentView.addSubview(exerciseNameLabel)
@@ -122,10 +121,8 @@ class ExerciseDetailViewController: UIViewController {
         scrollContentView.addSubview(imageCollectionView)
         scrollContentView.addSubview(exerciseDescriptionLabel)
         scrollContentView.addSubview(variationsCollectionView)
-        
-        
+
         variationsCollectionView.delegate = self
-        //        variationsCollectionView.dataSource = self
     }
     
     private func configureConstraints() {
@@ -159,20 +156,14 @@ class ExerciseDetailViewController: UIViewController {
             variationsCollectionView.topAnchor.constraint(equalTo: exerciseDescriptionLabel.bottomAnchor,constant: 20),
             variationsCollectionView.heightAnchor.constraint(equalToConstant: 300),
             
-            
         ])
     }
     
     private func configureView() {
         exerciseNameLabel.text = model?.exercise.name
         exerciseDescriptionLabel.text = model?.exercise.description
-        if let url = URL(string: model?.image.image ?? "") {
-            //            imgView.sd_setShowActivityIndicatorView(true)
-            //            imgView.sd_setIndicatorStyle(.gray)
-            self.placeholderImageView.sd_setImage(with: url, completed: nil)
-        }else {
-            self.placeholderImageView.image = UIImage(named: "placeholder")
-        }
+        placeholderImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        placeholderImageView.sd_setImage(with: URL(string: model?.image.image ?? ""), placeholderImage: UIImage(named: "placeholder"))
         
         configureViewModel()
         bindCollectionViewWithExerciseVariation()
@@ -215,9 +206,7 @@ class ExerciseDetailViewController: UIViewController {
 
 //MARK: - Extension for collectionview delegate and dataSource
 extension ExerciseDetailViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.size.width / 2.5, height: 230)
     }
@@ -225,6 +214,5 @@ extension ExerciseDetailViewController : UICollectionViewDelegate, UICollectionV
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
     }
-    
     
 }

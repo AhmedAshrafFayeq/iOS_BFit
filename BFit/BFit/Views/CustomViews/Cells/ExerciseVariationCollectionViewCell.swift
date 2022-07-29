@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class ExerciseVariationCollectionViewCell: UICollectionViewCell {
-   //MARK:- Vars
+   //MARK: - Vars
     static let identifier = "ExerciseVariationCollectionViewCell"
 
     private let exerciseImageView : UIImageView = {
@@ -22,7 +22,7 @@ class ExerciseVariationCollectionViewCell: UICollectionViewCell {
         return image
     }()
     
-    public let exersiseNameLabel : UILabel = {
+    private let exersiseNameLabel : UILabel = {
         let label =  UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
@@ -33,7 +33,7 @@ class ExerciseVariationCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    //MARK:- Initilizers
+    //MARK: - Initilizers
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = .systemBackground
@@ -45,7 +45,7 @@ class ExerciseVariationCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError()
     }
-  //MARK:- Layouts / Constraints
+  //MARK: - Layouts / Constraints
     private func setupLayouts(){
         contentView.addSubview(exerciseImageView)
         contentView.addSubview(exersiseNameLabel)
@@ -57,10 +57,8 @@ class ExerciseVariationCollectionViewCell: UICollectionViewCell {
         contentView.layer.shadowOpacity = 0.3
     }
     
-   
     private func configureConstraints(){
         NSLayoutConstraint.activate([
-        
             exerciseImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             exerciseImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             exerciseImageView.heightAnchor.constraint(equalToConstant: 150),
@@ -69,31 +67,13 @@ class ExerciseVariationCollectionViewCell: UICollectionViewCell {
             exersiseNameLabel.topAnchor.constraint(equalTo: exerciseImageView.bottomAnchor,constant: 8),
             exersiseNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10),
             exersiseNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -10),
-        
         ])
     }
     
-    //MARK:- Cell Configuration
+    //MARK: - Cell Configuration
     func configureCell(model: HomeModel ){
-     
-       
         self.exersiseNameLabel.text = model.exercise.name
-        if let url = URL(string: model.image.image) {
-//            imgView.sd_setShowActivityIndicatorView(true)
-//            imgView.sd_setIndicatorStyle(.gray)
-            self.exerciseImageView.sd_setImage(with: url, completed: nil)
-        }else {
-            self.exerciseImageView.image = UIImage(named: "placeholder")
-        }
-
-//        if let url = URL(string: "") {
-////            imgView.sd_setShowActivityIndicatorView(true)
-////            imgView.sd_setIndicatorStyle(.gray)
-//            self.exerciseImageView.sd_setImage(with: url, completed: nil)
-//        }else {
-//            self.exerciseImageView.image = UIImage(named: "placeholder")
-//        }
-       
-        
+        exerciseImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        exerciseImageView.sd_setImage(with: URL(string: model.image.image), placeholderImage: UIImage(named: "placeholder"))
     }
 }

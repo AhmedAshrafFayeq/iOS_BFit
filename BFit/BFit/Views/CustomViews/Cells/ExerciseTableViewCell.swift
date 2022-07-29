@@ -24,7 +24,7 @@ class ExerciseTableViewCell: UITableViewCell {
         return image
     }()
     
-    public let exerciseNameLabel : UILabel = {
+    private let exerciseNameLabel : UILabel = {
         let label =  UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
@@ -36,7 +36,7 @@ class ExerciseTableViewCell: UITableViewCell {
     }()
     
     //MARK: - Life Cycle
-    override  init(style: UITableViewCell.CellStyle, reuseIdentifier : String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier : String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         backgroundColor = .clear
@@ -58,7 +58,6 @@ class ExerciseTableViewCell: UITableViewCell {
     
     private func configureConstrains(){
         NSLayoutConstraint.activate([
-            
             exerciseImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 20),
             exerciseImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             exerciseImageView.widthAnchor.constraint(equalToConstant: 50),
@@ -67,7 +66,6 @@ class ExerciseTableViewCell: UITableViewCell {
             exerciseNameLabel.centerYAnchor.constraint(equalTo: exerciseImageView.centerYAnchor),
             exerciseNameLabel.leadingAnchor.constraint(equalTo: exerciseImageView.trailingAnchor, constant: 20),
             exerciseNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20)
-            
         ])
     }
     
