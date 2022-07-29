@@ -10,4 +10,5 @@ import Foundation
 struct HomeModel {
     let exercise: Exercise
     let image: Image
+    let vaiations: [HomeModel]?
 }

@@ -19,14 +19,14 @@ protocol ExerciseViewModelProtocol {
 }
 
 class ExerciseViewModel {
-    var exercises = [Exercise]()
-    var images = [Image]()
     
     //MARK: - Variables
+    var images = [Image]()
+    var exercises = [Exercise]()
     var exerciseAPI: ExercisesAPIProtocol?
     var exerciseImageAPI: ExerciseImageAPIProtocol?
     
-    //MARK: - Methods
+    //MARK: - Initialzer
     init() {
         exerciseAPI = ExercisesAPI()
         exerciseImageAPI = ExerciseImageAPI()

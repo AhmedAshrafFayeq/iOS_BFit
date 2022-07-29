@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import ProgressHUD
+import Alamofire
 
 class HomeViewController: UIViewController {
     
@@ -62,35 +63,42 @@ class HomeViewController: UIViewController {
     func bindTableViewWithExercise() {
         var homeModelList = [HomeModel]()
         var behaviourSubject = BehaviorSubject(value: homeModelList)
+        var exercisesVariation = [HomeModel]()
         
         Observable.combineLatest(exerciseViewModel!.exerciseBehaviorSubject, exerciseViewModel!.exerciseImageBehaviorSubject).map { exercises, images in
             let homeModelSortedList = zip(exercises, images).sorted(by: { $0.0.exerciseBase == $1.0.exerciseBase })
             for (exercise, image) in  homeModelSortedList {
-                homeModelList.append(HomeModel(exercise: exercise, image: image))
+                for v in exercise.variations {
+                    for (ex, im) in homeModelSortedList {
+                        if ex.id == v && exercise.id != v {
+                            exercisesVariation.append(HomeModel(exercise: ex, image: im, vaiations: exercisesVariation))
+                        }
+                    }
+                }
+                homeModelList.append(HomeModel(exercise: exercise, image: image, vaiations: exercisesVariation))
+                exercisesVariation.removeAll()
             }
             return homeModelList
         }.bind(to: behaviourSubject).disposed(by: disposeBag)
         
         behaviourSubject = BehaviorSubject(value: homeModelList)
-
         behaviourSubject.bind(to: tableView.rx.items(cellIdentifier: ExerciseTableViewCell.identifier, cellType: ExerciseTableViewCell.self)) { row ,item , cell in
             cell.configureCell(model: item)
         }.disposed(by: disposeBag)
         
-        
-        
+  
         // Did Tap On Item
-        tableView.rx.modelSelected(Exercise.self).subscribe(onNext: { [weak self] (model) in
-//            let newsVC = NewsDetailsViewController()
-//            newsVC.configureView(model: model)
-//            let navigationController = UINavigationController(rootViewController: newsVC)
-//            navigationController.modalPresentationStyle = .fullScreen
-//            self?.present(navigationController, animated: true, completion: nil)
+        tableView.rx.modelSelected(HomeModel.self).subscribe(onNext: { [weak self] (model) in
+            let exerciseDetailVC = ExerciseDetailViewController()
+            exerciseDetailVC.model = model
+            exerciseDetailVC.exerciseBehaviorSubject = BehaviorSubject(value: model.vaiations ?? [HomeModel]())
+            let navigationController = UINavigationController(rootViewController: exerciseDetailVC)
+            navigationController.modalPresentationStyle = .fullScreen
+            self?.present(navigationController, animated: true, completion: nil)
             
         }).disposed(by: disposeBag)
-        
+
     }
-    
 }
 
 // MARK: - extension for TableView Delegate
