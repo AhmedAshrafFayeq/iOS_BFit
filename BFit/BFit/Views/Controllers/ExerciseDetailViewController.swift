@@ -161,7 +161,7 @@ class ExerciseDetailViewController: UIViewController {
     
     private func configureView() {
         exerciseNameLabel.text = model?.exercise.name
-        exerciseDescriptionLabel.text = model?.exercise.description
+        exerciseDescriptionLabel.text = model?.exercise.exerciseDescription
         placeholderImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         placeholderImageView.sd_setImage(with: URL(string: model?.image.image ?? ""), placeholderImage: UIImage(named: "placeholder"))
         
