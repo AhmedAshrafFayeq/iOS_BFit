@@ -27,7 +27,7 @@ class ExerciseVariationCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.textColor = .label
-        label.textAlignment = .left
+        label.textAlignment = .center
         label.font = .systemFont(ofSize: 16, weight: .semibold)
         label.adjustsFontSizeToFitWidth = false
         return label
@@ -50,15 +50,11 @@ class ExerciseVariationCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(exerciseImageView)
         contentView.addSubview(exersiseNameLabel)
     
-        
         contentView.layer.shadowColor = UIColor.black.cgColor
         contentView.layer.shadowOffset = .zero
         contentView.layer.cornerRadius = 12
         contentView.layer.shadowRadius = 10
         contentView.layer.shadowOpacity = 0.3
-       
-        
-
     }
     
    

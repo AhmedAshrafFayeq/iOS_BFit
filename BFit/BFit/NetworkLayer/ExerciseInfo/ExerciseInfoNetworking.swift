@@ -15,7 +15,7 @@ enum ExerciseInfoNetworking {
 extension ExerciseInfoNetworking: TargetType{
     var baseURL: String {
         get {
-            return "https://wger.de/api/v2/"
+            return ServerConstants.baseServer
         }
         set {}
     }
@@ -23,7 +23,7 @@ extension ExerciseInfoNetworking: TargetType{
     var path: String {
         switch self {
         case .getExerciseInfoData:
-            return "exerciseinfo/?format=json"
+            return "exerciseinfo\(ServerConstants.language)\(ServerConstants.getLanguage())\(ServerConstants.format)"
         }
     }
     

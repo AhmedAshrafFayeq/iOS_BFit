@@ -11,6 +11,10 @@ import RxCocoa
 import ProgressHUD
 import Alamofire
 
+protocol SettingsButtonActionDelegate {
+    func didTabSettingsButton()
+}
+
 class HomeViewController: UIViewController {
     
     //MARK: - Variables
@@ -46,6 +50,7 @@ class HomeViewController: UIViewController {
     //MARK: - Customize Header  for the TableView
     func configureHeaderView() {
         let  headerView = ExerciseHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height / 7))
+        headerView.delegate = self
         tableView.tableHeaderView = headerView
     }
     
@@ -84,6 +89,7 @@ class HomeViewController: UIViewController {
         behaviourSubject = BehaviorSubject(value: homeModelList)
         behaviourSubject.bind(to: tableView.rx.items(cellIdentifier: ExerciseTableViewCell.identifier, cellType: ExerciseTableViewCell.self)) { row ,item , cell in
             cell.configureCell(model: item)
+            cell.selectionStyle = .none
         }.disposed(by: disposeBag)
         
   
@@ -95,7 +101,6 @@ class HomeViewController: UIViewController {
             let navigationController = UINavigationController(rootViewController: exerciseDetailVC)
             navigationController.modalPresentationStyle = .fullScreen
             self?.present(navigationController, animated: true, completion: nil)
-            
         }).disposed(by: disposeBag)
 
     }
@@ -108,4 +113,16 @@ extension HomeViewController : UITableViewDelegate {
         return 70
     }
     
+}
+
+//MARK: - Extension for Setting Button Delegate
+extension HomeViewController: SettingsButtonActionDelegate {
+
+    func didTabSettingsButton() {
+        let settingsVC = SettingsViewController()
+        settingsVC.modalPresentationStyle = .fullScreen
+        let navgation = UINavigationController(rootViewController: settingsVC)
+        present(navgation, animated: true, completion: nil)
+        
+    }
 }

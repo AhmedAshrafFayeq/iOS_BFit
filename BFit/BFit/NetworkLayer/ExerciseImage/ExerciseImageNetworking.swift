@@ -15,7 +15,7 @@ enum ExerciseImageNetworking {
 extension ExerciseImageNetworking: TargetType{
     var baseURL: String {
         get {
-            return "https://wger.de/api/v2/"
+            return ServerConstants.baseServer
         }
         set {}
     }
@@ -23,7 +23,7 @@ extension ExerciseImageNetworking: TargetType{
     var path: String {
         switch self {
         case .getExerciseImageData:
-            return "exerciseimage/?format=json"
+            return "exerciseimage\(ServerConstants.language)\(ServerConstants.getLanguage())\(ServerConstants.format)"
         }
     }
     

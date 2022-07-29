@@ -18,7 +18,7 @@ class ExerciseDetailViewController: UIViewController {
     var exerciseBehaviorSubject: BehaviorSubject<[HomeModel]>?
     private var exerciseDetailViewModel: ExerciseDetailViewModelProtocol?
     private let disposeBag = DisposeBag()
-
+    
     private let scrollView: UIScrollView = {
         let v = UIScrollView()
         v.isScrollEnabled = true
@@ -114,7 +114,7 @@ class ExerciseDetailViewController: UIViewController {
     
     //MARK: - Layouts and Cosntraints
     private func setupView() {
-    
+        
         view.addSubview(scrollView)
         scrollView.addSubview(scrollContentView)
         scrollContentView.addSubview(exerciseNameLabel)
@@ -122,10 +122,10 @@ class ExerciseDetailViewController: UIViewController {
         scrollContentView.addSubview(imageCollectionView)
         scrollContentView.addSubview(exerciseDescriptionLabel)
         scrollContentView.addSubview(variationsCollectionView)
-
-    
+        
+        
         variationsCollectionView.delegate = self
-//        variationsCollectionView.dataSource = self
+        //        variationsCollectionView.dataSource = self
     }
     
     private func configureConstraints() {
@@ -149,20 +149,26 @@ class ExerciseDetailViewController: UIViewController {
             imageCollectionView.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor,constant: -20),
             imageCollectionView.topAnchor.constraint(equalTo: placeholderImageView.bottomAnchor,constant: 20),
             
+            exerciseDescriptionLabel.leadingAnchor.constraint(equalTo: scrollContentView.leadingAnchor,constant: 20),
+            exerciseDescriptionLabel.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor,constant: -20),
+            exerciseDescriptionLabel.topAnchor.constraint(equalTo: placeholderImageView.bottomAnchor,constant: 20),
+            
+            
             variationsCollectionView.leadingAnchor.constraint(equalTo: scrollContentView.leadingAnchor,constant: 20),
             variationsCollectionView.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor,constant: -20),
-            variationsCollectionView.topAnchor.constraint(equalTo: imageCollectionView.bottomAnchor,constant: 20),
+            variationsCollectionView.topAnchor.constraint(equalTo: exerciseDescriptionLabel.bottomAnchor,constant: 20),
             variationsCollectionView.heightAnchor.constraint(equalToConstant: 300),
-         
+            
             
         ])
     }
     
     private func configureView() {
         exerciseNameLabel.text = model?.exercise.name
+        exerciseDescriptionLabel.text = model?.exercise.description
         if let url = URL(string: model?.image.image ?? "") {
-//            imgView.sd_setShowActivityIndicatorView(true)
-//            imgView.sd_setIndicatorStyle(.gray)
+            //            imgView.sd_setShowActivityIndicatorView(true)
+            //            imgView.sd_setIndicatorStyle(.gray)
             self.placeholderImageView.sd_setImage(with: url, completed: nil)
         }else {
             self.placeholderImageView.image = UIImage(named: "placeholder")
@@ -193,8 +199,8 @@ class ExerciseDetailViewController: UIViewController {
             cell.configureCell(model: item)
         }.disposed(by: disposeBag)
         
+        
         // Did Tap On Item
-
         variationsCollectionView.rx.modelSelected(HomeModel.self).subscribe(onNext: { [weak self] (model) in
             let exerciseDetailVC = ExerciseDetailViewController()
             exerciseDetailVC.model = model
@@ -209,8 +215,8 @@ class ExerciseDetailViewController: UIViewController {
 
 //MARK: - Extension for collectionview delegate and dataSource
 extension ExerciseDetailViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-   
-
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.size.width / 2.5, height: 230)

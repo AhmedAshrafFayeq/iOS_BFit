@@ -19,7 +19,7 @@ struct Exercise: Codable {
     let id: Int
     let uuid, name: String
     let exerciseBase: Int
-    let resultDescription, creationDate: String
+    let description, creationDate: String
     let category: Int
     let muscles, musclesSecondary, equipment: [Int]
     let language, license: Int
@@ -29,7 +29,7 @@ struct Exercise: Codable {
     enum CodingKeys: String, CodingKey {
         case id, uuid, name
         case exerciseBase = "exercise_base"
-        case resultDescription = "description"
+        case description
         case creationDate = "creation_date"
         case category, muscles
         case musclesSecondary = "muscles_secondary"
