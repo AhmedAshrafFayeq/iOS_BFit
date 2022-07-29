@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0B718D59BF2369E2B958951D /* Pods_BFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA92050C8DACEB3A8BDED1E /* Pods_BFit.framework */; };
+		5B145CBD2892FC70001A6F4B /* ExerciseInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CBC2892FC70001A6F4B /* ExerciseInfoAPI.swift */; };
+		5B145CBF2892FC82001A6F4B /* ExerciseInfoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CBE2892FC82001A6F4B /* ExerciseInfoNetworking.swift */; };
+		5B145CC12892FD32001A6F4B /* ExerciseInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CC02892FD32001A6F4B /* ExerciseInfoResponse.swift */; };
+		5B145CC32892FEFD001A6F4B /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CC22892FEFD001A6F4B /* ExerciseDetailViewModel.swift */; };
+		5B145CC528931537001A6F4B /* ExerciseVariationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CC428931537001A6F4B /* ExerciseVariationCollectionViewCell.swift */; };
 		5B16B102288F149500AF42D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B101288F149500AF42D9 /* AppDelegate.swift */; };
 		5B16B104288F149500AF42D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B103288F149500AF42D9 /* SceneDelegate.swift */; };
 		5B16B10B288F149700AF42D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B16B10A288F149700AF42D9 /* Assets.xcassets */; };
@@ -26,10 +31,17 @@
 		5B16B142289068F900AF42D9 /* ExerciseImageNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B141289068F900AF42D9 /* ExerciseImageNetworking.swift */; };
 		5B16B1442891D63100AF42D9 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B1432891D63000AF42D9 /* HomeModel.swift */; };
 		5B16B1462892177F00AF42D9 /* ExerciseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B1452892177F00AF42D9 /* ExerciseHeaderView.swift */; };
+		5B16B14828921CC000AF42D9 /* ExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B14728921CC000AF42D9 /* ExerciseDetailViewController.swift */; };
+		5B16B14A2892229100AF42D9 /* ExerciseImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B1492892229100AF42D9 /* ExerciseImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B987B537A5AC09F2F60DAD0 /* Pods-BFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFit.release.xcconfig"; path = "Target Support Files/Pods-BFit/Pods-BFit.release.xcconfig"; sourceTree = "<group>"; };
+		5B145CBC2892FC70001A6F4B /* ExerciseInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInfoAPI.swift; sourceTree = "<group>"; };
+		5B145CBE2892FC82001A6F4B /* ExerciseInfoNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInfoNetworking.swift; sourceTree = "<group>"; };
+		5B145CC02892FD32001A6F4B /* ExerciseInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInfoResponse.swift; sourceTree = "<group>"; };
+		5B145CC22892FEFD001A6F4B /* ExerciseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewModel.swift; sourceTree = "<group>"; };
+		5B145CC428931537001A6F4B /* ExerciseVariationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVariationCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B16B0FE288F149500AF42D9 /* BFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B16B101288F149500AF42D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B16B103288F149500AF42D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +62,8 @@
 		5B16B141289068F900AF42D9 /* ExerciseImageNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseImageNetworking.swift; sourceTree = "<group>"; };
 		5B16B1432891D63000AF42D9 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		5B16B1452892177F00AF42D9 /* ExerciseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHeaderView.swift; sourceTree = "<group>"; };
+		5B16B14728921CC000AF42D9 /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
+		5B16B1492892229100AF42D9 /* ExerciseImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9AFD0CE79DFA57C43AE6F0DD /* Pods-BFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFit.debug.xcconfig"; path = "Target Support Files/Pods-BFit/Pods-BFit.debug.xcconfig"; sourceTree = "<group>"; };
 		CEA92050C8DACEB3A8BDED1E /* Pods_BFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +88,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B145CBB2892FC57001A6F4B /* ExerciseInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5B145CBC2892FC70001A6F4B /* ExerciseInfoAPI.swift */,
+				5B145CBE2892FC82001A6F4B /* ExerciseInfoNetworking.swift */,
+			);
+			path = ExerciseInfo;
+			sourceTree = "<group>";
+		};
 		5B16B0F5288F149500AF42D9 = {
 			isa = PBXGroup;
 			children = (
@@ -95,10 +118,10 @@
 		5B16B100288F149500AF42D9 /* BFit */ = {
 			isa = PBXGroup;
 			children = (
-				5B16B13528904F9600AF42D9 /* ViewModels */,
 				5B16B131289049A800AF42D9 /* Models */,
 				5B16B1242890325F00AF42D9 /* NetworkLayer */,
 				5B16B115288F167100AF42D9 /* Views */,
+				5B16B13528904F9600AF42D9 /* ViewModels */,
 				5B16B101288F149500AF42D9 /* AppDelegate.swift */,
 				5B16B103288F149500AF42D9 /* SceneDelegate.swift */,
 				5B16B10A288F149700AF42D9 /* Assets.xcassets */,
@@ -121,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5B16B117288F169D00AF42D9 /* HomeViewController.swift */,
+				5B16B14728921CC000AF42D9 /* ExerciseDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -128,6 +152,7 @@
 		5B16B1242890325F00AF42D9 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5B145CBB2892FC57001A6F4B /* ExerciseInfo */,
 				5B16B13E289068CD00AF42D9 /* ExerciseImage */,
 				5B16B1262890327500AF42D9 /* Exercises */,
 				5B16B1252890326E00AF42D9 /* Base */,
@@ -159,6 +184,7 @@
 			children = (
 				5B16B133289049D700AF42D9 /* ExerciseResponse.swift */,
 				5B16B13C2890687800AF42D9 /* ExcerciseImagesResponse.swift */,
+				5B145CC02892FD32001A6F4B /* ExerciseInfoResponse.swift */,
 				5B16B1432891D63000AF42D9 /* HomeModel.swift */,
 			);
 			path = Models;
@@ -168,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				5B16B13728904FC800AF42D9 /* ExerciseViewModel.swift */,
+				5B145CC22892FEFD001A6F4B /* ExerciseDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -175,8 +202,8 @@
 		5B16B13928905F8300AF42D9 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				5B16B13A28905FDB00AF42D9 /* ExerciseTableViewCell.swift */,
 				5B16B1452892177F00AF42D9 /* ExerciseHeaderView.swift */,
+				5B16B14B289222A500AF42D9 /* Cells */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -188,6 +215,16 @@
 				5B16B141289068F900AF42D9 /* ExerciseImageNetworking.swift */,
 			);
 			path = ExerciseImage;
+			sourceTree = "<group>";
+		};
+		5B16B14B289222A500AF42D9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B16B13A28905FDB00AF42D9 /* ExerciseTableViewCell.swift */,
+				5B16B1492892229100AF42D9 /* ExerciseImageCollectionViewCell.swift */,
+				5B145CC428931537001A6F4B /* ExerciseVariationCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B7E9232F8A3B4612CE2D63E6 /* Pods */ = {
@@ -321,14 +358,21 @@
 				5B16B12C2890330200AF42D9 /* BaseResponse.swift in Sources */,
 				5B16B140289068EA00AF42D9 /* ExerciseImageAPI.swift in Sources */,
 				5B16B104288F149500AF42D9 /* SceneDelegate.swift in Sources */,
+				5B16B14A2892229100AF42D9 /* ExerciseImageCollectionViewCell.swift in Sources */,
+				5B145CC12892FD32001A6F4B /* ExerciseInfoResponse.swift in Sources */,
 				5B16B1442891D63100AF42D9 /* HomeModel.swift in Sources */,
+				5B145CBD2892FC70001A6F4B /* ExerciseInfoAPI.swift in Sources */,
 				5B16B13828904FC800AF42D9 /* ExerciseViewModel.swift in Sources */,
 				5B16B142289068F900AF42D9 /* ExerciseImageNetworking.swift in Sources */,
 				5B16B13D2890687800AF42D9 /* ExcerciseImagesResponse.swift in Sources */,
+				5B145CC32892FEFD001A6F4B /* ExerciseDetailViewModel.swift in Sources */,
+				5B16B14828921CC000AF42D9 /* ExerciseDetailViewController.swift in Sources */,
 				5B16B12E289033A200AF42D9 /* ExercisesAPI.swift in Sources */,
 				5B16B118288F169D00AF42D9 /* HomeViewController.swift in Sources */,
 				5B16B130289033C900AF42D9 /* ExercisesNetworking.swift in Sources */,
 				5B16B1462892177F00AF42D9 /* ExerciseHeaderView.swift in Sources */,
+				5B145CBF2892FC82001A6F4B /* ExerciseInfoNetworking.swift in Sources */,
+				5B145CC528931537001A6F4B /* ExerciseVariationCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
