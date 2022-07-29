@@ -11,5 +11,6 @@ target 'BFit' do
 	pod 'RxSwift'
 	pod 'RxCocoa' 
 	pod 'ProgressHUD'
+	pod 'LanguageManager-iOS'
 
 end
