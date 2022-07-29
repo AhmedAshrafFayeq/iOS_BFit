@@ -105,7 +105,7 @@ class ExerciseDetailViewController: UIViewController {
     func configureNavBar() {
         // set the left buton to the navBar
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .done, target: self, action: #selector(didTabBackButton))
-        navigationController?.navigationBar.tintColor = .systemPink
+        navigationController?.navigationBar.tintColor = .appThemeColor()
     }
     
     @objc private func didTabBackButton() {

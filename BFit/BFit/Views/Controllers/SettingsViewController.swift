@@ -22,16 +22,7 @@ class SettingsViewController: UIViewController {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .systemBackground
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
-        
-        view.addSubview(tableView)
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        
+        setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,19 +37,24 @@ class SettingsViewController: UIViewController {
         configureButtons()
     }
     
-    //MARK:- Configure NavBar Buttons
+    //MARK: - Configure NavBar Button
     private func configureButtons(){
         navigationItem.leftBarButtonItem = UIBarButtonItem( image: UIImage(systemName: "chevron.backward") ,style: .done, target: self, action: #selector(didTabBackButton))
-        
-        navigationController?.navigationBar.tintColor = .systemPink
-        
+        navigationController?.navigationBar.tintColor = .appThemeColor()
     }
     
     @objc private func didTabBackButton(){
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    func setupView() {
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+        view.addSubview(tableView)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
     
 }
 
@@ -73,10 +69,9 @@ extension SettingsViewController: UITableViewDelegate,UITableViewDataSource {
             return UITableViewCell()
         }
         cell.imageView?.image = UIImage(systemName: "globe",withConfiguration: UIImage.SymbolConfiguration(pointSize: 22))
-        
         cell.textLabel?.text = "CHANGE_LANGUAGE".localized(forLanguageCode: NSLocale.preferredLanguages[0])
         cell.textLabel?.font = .systemFont(ofSize: 22)
-        cell.tintColor = .systemPink
+        cell.tintColor = .appThemeColor()
         cell.accessoryType = .disclosureIndicator
         return cell
     }

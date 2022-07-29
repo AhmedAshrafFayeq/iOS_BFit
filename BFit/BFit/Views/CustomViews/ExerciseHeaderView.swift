@@ -38,7 +38,7 @@ class ExerciseHeaderView: UIView {
     private let settingButton : UIButton = {
         let button =  UIButton()
         button.setImage(UIImage(systemName: "gearshape",withConfiguration: UIImage.SymbolConfiguration(pointSize: 30, weight: .regular)), for: .normal)
-        button.tintColor = .systemPink
+        button.tintColor = .appThemeColor()
         button.layer.cornerRadius = 30
         button.addTarget(self, action: #selector(didTabSettingsButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false

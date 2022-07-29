@@ -1,5 +1,5 @@
 //
-//  Extensions+String.swift
+//  String+Extensions.swift
 //  BFit
 //
 //  Created by Ahmed Fayeq on 29/07/2022.
