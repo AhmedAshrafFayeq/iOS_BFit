@@ -39,7 +39,6 @@ extension ExerciseDetailViewModel: ExerciseDetailViewModelProtocol {
         exerciseInfoAPI?.getExcerciseInfoData(completion: { (result) in
             switch result{
             case .success(let response):
-                print(response)
                 
                 self.exerciseImages = response?.results.first?.images ?? []
                 self.exerciseInfoBehaviorSubject.on(.next(response?.results.first?.images ?? []))

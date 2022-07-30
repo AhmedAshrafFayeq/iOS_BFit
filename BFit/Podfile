@@ -13,4 +13,9 @@ target 'BFit' do
 	pod 'ProgressHUD'
 	pod 'LanguageManager-iOS'
 
+  target 'BFitTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
 end

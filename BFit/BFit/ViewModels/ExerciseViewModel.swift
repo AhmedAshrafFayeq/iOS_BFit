@@ -63,11 +63,8 @@ extension ExerciseViewModel: ExerciseViewModelProtocol {
         exerciseImageAPI?.getExcerciseImageData(completion: { (result) in
             switch result{
             case .success(let response):
-                print(response)
-                
                 self.images = response?.results ?? []
                 self.exerciseImageBehaviorSubject.on(.next(response?.results ?? []))
-              //  self.images = self.exerciseBehaviorSubject.filter{$0.first?.id == self.images.first?.id}
                 completion(true)
                 
             case .failure(let error):
