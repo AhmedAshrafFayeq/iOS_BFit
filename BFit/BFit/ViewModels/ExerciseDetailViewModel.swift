@@ -17,14 +17,15 @@ protocol ExerciseDetailViewModelProtocol {
 }
 
 
-class ExerciseDetailViewModel {
+class ExerciseDetailViewModel: BaseViewModel {
     
     //MARK: - Variables
     var exerciseImages = [Image]()
     var exerciseInfoAPI: ExerciseInfoAPIProtocol?
     
     //MARK: - Initialzer
-    init() {
+    override init() {
+        super.init()
         exerciseInfoAPI = ExerciseInfoAPI()
     }
 }

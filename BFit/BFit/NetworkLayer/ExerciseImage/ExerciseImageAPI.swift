@@ -16,7 +16,6 @@ protocol ExerciseImageAPIProtocol {
 
 class ExerciseImageAPI: BaseApi<ExerciseImageNetworking>, ExerciseImageAPIProtocol{
     // MARK: - Requests
-    
     func getExcerciseImageData(completion: @escaping (Swift.Result<ExcerciseImagesResponse?, AFError>)-> Void) {
         self.fetchData(target: .getExerciseImageData, responseClass: ExcerciseImagesResponse.self) { (result) in
             completion(result)

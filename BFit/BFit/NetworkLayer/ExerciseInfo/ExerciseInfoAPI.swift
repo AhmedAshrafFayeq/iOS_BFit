@@ -16,7 +16,6 @@ protocol ExerciseInfoAPIProtocol {
 
 class ExerciseInfoAPI: BaseApi<ExerciseInfoNetworking>, ExerciseInfoAPIProtocol{
     // MARK: - Requests
-    
     func getExcerciseInfoData(completion: @escaping (Swift.Result<ExerciseInfoResponse?, AFError>)-> Void) {
         self.fetchData(target: .getExerciseInfoData, responseClass: ExerciseInfoResponse.self) { (result) in
             completion(result)
