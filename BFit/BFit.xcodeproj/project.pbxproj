@@ -39,7 +39,18 @@
 		5B55587C28943D8300102E87 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55587B28943D8300102E87 /* String+Extension.swift */; };
 		5B55587F28945D4300102E87 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55587E28945D4300102E87 /* UIColor+Extension.swift */; };
 		5B5558812894635D00102E87 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558802894635D00102E87 /* UIView+Extension.swift */; };
+		5B5558892894AE4B00102E87 /* BFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558882894AE4B00102E87 /* BFitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B55588A2894AE4B00102E87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B16B0F6288F149500AF42D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B16B0FD288F149500AF42D9;
+			remoteInfo = BFit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3B987B537A5AC09F2F60DAD0 /* Pods-BFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFit.release.xcconfig"; path = "Target Support Files/Pods-BFit/Pods-BFit.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +89,8 @@
 		5B55587B28943D8300102E87 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		5B55587E28945D4300102E87 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5B5558802894635D00102E87 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		5B5558862894AE4B00102E87 /* BFitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BFitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5558882894AE4B00102E87 /* BFitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFitTests.swift; sourceTree = "<group>"; };
 		9AFD0CE79DFA57C43AE6F0DD /* Pods-BFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFit.debug.xcconfig"; path = "Target Support Files/Pods-BFit/Pods-BFit.debug.xcconfig"; sourceTree = "<group>"; };
 		CEA92050C8DACEB3A8BDED1E /* Pods_BFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +101,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B718D59BF2369E2B958951D /* Pods_BFit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B5558832894AE4B00102E87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				5B16B100288F149500AF42D9 /* BFit */,
+				5B5558872894AE4B00102E87 /* BFitTests */,
 				5B16B0FF288F149500AF42D9 /* Products */,
 				B7E9232F8A3B4612CE2D63E6 /* Pods */,
 				3316FBBC5F1020EAD02C12AD /* Frameworks */,
@@ -135,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				5B16B0FE288F149500AF42D9 /* BFit.app */,
+				5B5558862894AE4B00102E87 /* BFitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +293,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5B5558872894AE4B00102E87 /* BFitTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B5558882894AE4B00102E87 /* BFitTests.swift */,
+			);
+			path = BFitTests;
+			sourceTree = "<group>";
+		};
 		B7E9232F8A3B4612CE2D63E6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +332,24 @@
 			productReference = 5B16B0FE288F149500AF42D9 /* BFit.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5B5558852894AE4B00102E87 /* BFitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B55588E2894AE4B00102E87 /* Build configuration list for PBXNativeTarget "BFitTests" */;
+			buildPhases = (
+				5B5558822894AE4B00102E87 /* Sources */,
+				5B5558832894AE4B00102E87 /* Frameworks */,
+				5B5558842894AE4B00102E87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B55588B2894AE4B00102E87 /* PBXTargetDependency */,
+			);
+			name = BFitTests;
+			productName = BFitTests;
+			productReference = 5B5558862894AE4B00102E87 /* BFitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -314,6 +362,10 @@
 				TargetAttributes = {
 					5B16B0FD288F149500AF42D9 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					5B5558852894AE4B00102E87 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 5B16B0FD288F149500AF42D9;
 					};
 				};
 			};
@@ -332,6 +384,7 @@
 			projectRoot = "";
 			targets = (
 				5B16B0FD288F149500AF42D9 /* BFit */,
+				5B5558852894AE4B00102E87 /* BFitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -344,6 +397,13 @@
 				5B16B10E288F149700AF42D9 /* LaunchScreen.storyboard in Resources */,
 				5B55587528943D2F00102E87 /* Localizable.strings in Resources */,
 				5B16B10B288F149700AF42D9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B5558842894AE4B00102E87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +487,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5B5558822894AE4B00102E87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5558892894AE4B00102E87 /* BFitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B55588B2894AE4B00102E87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B16B0FD288F149500AF42D9 /* BFit */;
+			targetProxy = 5B55588A2894AE4B00102E87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5B16B10C288F149700AF42D9 /* LaunchScreen.storyboard */ = {
@@ -625,6 +701,40 @@
 			};
 			name = Release;
 		};
+		5B55588C2894AE4B00102E87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Fayq.BFitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BFit.app/BFit";
+			};
+			name = Debug;
+		};
+		5B55588D2894AE4B00102E87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Fayq.BFitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BFit.app/BFit";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -642,6 +752,15 @@
 			buildConfigurations = (
 				5B16B113288F149700AF42D9 /* Debug */,
 				5B16B114288F149700AF42D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B55588E2894AE4B00102E87 /* Build configuration list for PBXNativeTarget "BFitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B55588C2894AE4B00102E87 /* Debug */,
+				5B55588D2894AE4B00102E87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
