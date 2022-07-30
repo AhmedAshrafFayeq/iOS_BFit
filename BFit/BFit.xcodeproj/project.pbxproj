@@ -43,6 +43,7 @@
 		5B5558A528953F9F00102E87 /* ExerciseAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558A428953F9F00102E87 /* ExerciseAPITest.swift */; };
 		5B5558A828953FC900102E87 /* Bundle+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558A728953FC900102E87 /* Bundle+UnitTest.swift */; };
 		5B5558AB2895400600102E87 /* ExerciseAPIMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B5558AA2895400600102E87 /* ExerciseAPIMock.json */; };
+		5B5558AD289564CA00102E87 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558AC289564CA00102E87 /* SettingsView.swift */; };
 		9109A685C408FE62234E2F22 /* Pods_BFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028747C4817147153331C77 /* Pods_BFitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		5B5558A428953F9F00102E87 /* ExerciseAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseAPITest.swift; sourceTree = "<group>"; };
 		5B5558A728953FC900102E87 /* Bundle+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+UnitTest.swift"; sourceTree = "<group>"; };
 		5B5558AA2895400600102E87 /* ExerciseAPIMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExerciseAPIMock.json; sourceTree = "<group>"; };
+		5B5558AC289564CA00102E87 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5E92FBACB420DC76186E7A6B /* Pods-BFitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFitTests.release.xcconfig"; path = "Target Support Files/Pods-BFitTests/Pods-BFitTests.release.xcconfig"; sourceTree = "<group>"; };
 		9AFD0CE79DFA57C43AE6F0DD /* Pods-BFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFit.debug.xcconfig"; path = "Target Support Files/Pods-BFit/Pods-BFit.debug.xcconfig"; sourceTree = "<group>"; };
 		B028747C4817147153331C77 /* Pods_BFitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,9 +185,7 @@
 				5B16B13528904F9600AF42D9 /* ViewModels */,
 				5B16B101288F149500AF42D9 /* AppDelegate.swift */,
 				5B16B103288F149500AF42D9 /* SceneDelegate.swift */,
-				5B16B10A288F149700AF42D9 /* Assets.xcassets */,
-				5B16B10C288F149700AF42D9 /* LaunchScreen.storyboard */,
-				5B16B10F288F149700AF42D9 /* Info.plist */,
+				5B5558AF289565B600102E87 /* Resources */,
 			);
 			path = BFit;
 			sourceTree = "<group>";
@@ -262,6 +262,7 @@
 		5B16B13928905F8300AF42D9 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				5B5558AC289564CA00102E87 /* SettingsView.swift */,
 				5B16B1452892177F00AF42D9 /* ExerciseHeaderView.swift */,
 				5B16B14B289222A500AF42D9 /* Cells */,
 			);
@@ -338,6 +339,16 @@
 				5B5558AA2895400600102E87 /* ExerciseAPIMock.json */,
 			);
 			path = APIMocking;
+			sourceTree = "<group>";
+		};
+		5B5558AF289565B600102E87 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B16B10A288F149700AF42D9 /* Assets.xcassets */,
+				5B16B10C288F149700AF42D9 /* LaunchScreen.storyboard */,
+				5B16B10F288F149700AF42D9 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B7E9232F8A3B4612CE2D63E6 /* Pods */ = {
@@ -539,6 +550,7 @@
 				5B16B13828904FC800AF42D9 /* ExerciseViewModel.swift in Sources */,
 				5B16B142289068F900AF42D9 /* ExerciseImageNetworking.swift in Sources */,
 				5B16B13D2890687800AF42D9 /* ExcerciseImagesResponse.swift in Sources */,
+				5B5558AD289564CA00102E87 /* SettingsView.swift in Sources */,
 				5B145CC32892FEFD001A6F4B /* ExerciseDetailViewModel.swift in Sources */,
 				5B16B14828921CC000AF42D9 /* ExerciseDetailViewController.swift in Sources */,
 				5B16B12E289033A200AF42D9 /* ExercisesAPI.swift in Sources */,
