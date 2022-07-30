@@ -12,7 +12,7 @@ class ExerciseTableViewCell: UITableViewCell {
     
     //MARK: - Vars
     static let identifier = "ExerciseTableViewCell"
-    
+
     private let exerciseImageView : UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleToFill
@@ -38,7 +38,6 @@ class ExerciseTableViewCell: UITableViewCell {
     //MARK: - Life Cycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier : String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         backgroundColor = .clear
         setupView()
         configureConstrains()
@@ -70,7 +69,6 @@ class ExerciseTableViewCell: UITableViewCell {
     }
     
     //MARK: - Cell Configuration
-    
     func configureCell(model: HomeModel){
         self.exerciseNameLabel.text = model.exercise.name
         if let url = URL(string: model.image.image) {

@@ -13,28 +13,27 @@ struct SettingsView: View {
             Section() {
                 VStack{
                     Spacer()
-                HStack{
-                    SwiftUI.Image(systemName: "globe")
-                        .resizable()
-                        .frame(width: 28, height: 28)
-                        .cornerRadius(5)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 5)
-                                .strokeBorder(Color.clear, lineWidth: 1)
-                        )
-                        .foregroundColor(Color(UIColor.appThemeColor()))
-                    
-                    Text("CHANGE_LANGUAGE".localized(forLanguageCode: NSLocale.preferredLanguages[0]))
-                        .font(.system(size: 24, design: .rounded))
-                        .padding()
-                    Spacer()
-                    Button(action: {}){
-                        SwiftUI.Image(systemName:"chevron.right")
-                            .font(.body)
+                    HStack{
+                        SwiftUI.Image(systemName: "globe")
+                            .resizable()
+                            .frame(width: 28, height: 28)
+                            .cornerRadius(5)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 5)
+                                    .strokeBorder(Color.clear, lineWidth: 1)
+                            )
                             .foregroundColor(Color(UIColor.appThemeColor()))
+                        Text("CHANGE_LANGUAGE".localized(forLanguageCode: NSLocale.preferredLanguages[0]))
+                            .font(.system(size: 24, design: .rounded))
+                            .padding()
+                        Spacer()
+                        Button(action: {}){
+                            SwiftUI.Image(systemName:"chevron.right")
+                                .font(.body)
+                                .foregroundColor(Color(UIColor.appThemeColor()))
+                        }
                     }
-                }
-                   Spacer()
+                    Spacer()
                 }
             }
             .frame(height: 70)

@@ -20,7 +20,6 @@ class ExerciseImageCollectionViewCell: UICollectionViewCell {
         image.layer.cornerRadius = 12
         image.clipsToBounds = true
         image.translatesAutoresizingMaskIntoConstraints = false
-        
         return image
     }()
     

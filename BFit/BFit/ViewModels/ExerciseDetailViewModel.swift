@@ -52,5 +52,4 @@ extension ExerciseDetailViewModel: ExerciseDetailViewModelProtocol {
         })
     }
     
-    
 }

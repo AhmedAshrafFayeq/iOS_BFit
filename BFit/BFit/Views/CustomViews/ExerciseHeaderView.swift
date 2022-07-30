@@ -20,18 +20,17 @@ class ExerciseHeaderView: UIView {
         image.layer.cornerRadius = 30
         image.tintColor = .systemPink
         image.translatesAutoresizingMaskIntoConstraints = false
-        
         return image
     }()
     
     public let titleLabel : UILabel = {
         let label =  UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 1
         label.textColor = .label
         label.text = "TOP_EXERCISES_LABEL_TITLE".localized(forLanguageCode: NSLocale.preferredLanguages[0])
         label.font = .systemFont(ofSize: 26, weight: .bold)
         label.adjustsFontSizeToFitWidth = false
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -42,7 +41,6 @@ class ExerciseHeaderView: UIView {
         button.layer.cornerRadius = 30
         button.addTarget(self, action: #selector(didTabSettingsButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
-        
         return button
     }()
     
@@ -52,10 +50,8 @@ class ExerciseHeaderView: UIView {
         super.init(frame: frame)
         backgroundColor = .clear
         self.clipsToBounds = true
-        
         setupViews()
         configureConstraints()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -72,28 +68,25 @@ class ExerciseHeaderView: UIView {
     
     private func configureConstraints(){
         NSLayoutConstraint.activate([
-            
             logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 5),
             logoImageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -5),
             logoImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -25),
             logoImageView.widthAnchor.constraint(equalToConstant: 90),
             logoImageView.heightAnchor.constraint(equalToConstant: 90 ),
             
-            titleLabel.leadingAnchor.constraint(equalTo: logoImageView.leadingAnchor, constant: 5),
+            titleLabel.leadingAnchor.constraint(equalTo: logoImageView.leadingAnchor, constant: 15),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
             titleLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor),
 
             settingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             settingButton.centerYAnchor.constraint(equalTo: logoImageView.centerYAnchor),
-            settingButton.widthAnchor.constraint(equalToConstant: 50 ),
-            settingButton.heightAnchor.constraint(equalToConstant: 50 ),
-            
+            settingButton.widthAnchor.constraint(equalToConstant: 60 ),
+            settingButton.heightAnchor.constraint(equalToConstant: 60 ),
         ])
     }
     
     //MARK: - Settings Buttons Action
     @objc private func didTabSettingsButton (){
         delegate?.didTabSettingsButton()
-        
     }
 }

@@ -41,20 +41,15 @@ class ExerciseVariationCollectionViewCell: UICollectionViewCell {
         configureConstraints()
     }
     
-
     required init?(coder: NSCoder) {
         fatalError()
     }
+    
   //MARK: - Layouts / Constraints
     private func setupLayouts(){
         contentView.addSubview(exerciseImageView)
         contentView.addSubview(exersiseNameLabel)
-    
-        contentView.layer.shadowColor = UIColor.black.cgColor
-        contentView.layer.shadowOffset = .zero
-        contentView.layer.cornerRadius = 12
-        contentView.layer.shadowRadius = 10
-        contentView.layer.shadowOpacity = 0.3
+        contentView.addShadowToView()
     }
     
     private func configureConstraints(){
