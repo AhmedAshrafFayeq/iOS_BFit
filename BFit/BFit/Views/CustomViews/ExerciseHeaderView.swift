@@ -30,7 +30,7 @@ class ExerciseHeaderView: UIView {
         label.numberOfLines = 1
         label.textColor = .label
         label.text = "TOP_EXERCISES_LABEL_TITLE".localized(forLanguageCode: NSLocale.preferredLanguages[0])
-        label.font = .systemFont(ofSize: 28, weight: .bold)
+        label.font = .systemFont(ofSize: 26, weight: .bold)
         label.adjustsFontSizeToFitWidth = false
         return label
     }()
@@ -74,18 +74,19 @@ class ExerciseHeaderView: UIView {
         NSLayoutConstraint.activate([
             
             logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 5),
-            logoImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            logoImageView.widthAnchor.constraint(equalToConstant: 70),
-            logoImageView.heightAnchor.constraint(equalToConstant: 70 ),
+            logoImageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -5),
+            logoImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -25),
+            logoImageView.widthAnchor.constraint(equalToConstant: 90),
+            logoImageView.heightAnchor.constraint(equalToConstant: 90 ),
             
-            titleLabel.leadingAnchor.constraint(equalTo: logoImageView.trailingAnchor, constant: 5),
-            titleLabel.centerYAnchor.constraint(equalTo: logoImageView.centerYAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: logoImageView.leadingAnchor, constant: 5),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
-            
+            titleLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor),
+
             settingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             settingButton.centerYAnchor.constraint(equalTo: logoImageView.centerYAnchor),
-            settingButton.widthAnchor.constraint(equalToConstant: 40 ),
-            settingButton.heightAnchor.constraint(equalToConstant: 40 ),
+            settingButton.widthAnchor.constraint(equalToConstant: 50 ),
+            settingButton.heightAnchor.constraint(equalToConstant: 50 ),
             
         ])
     }

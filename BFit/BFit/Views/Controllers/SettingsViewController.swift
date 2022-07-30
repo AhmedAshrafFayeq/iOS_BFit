@@ -6,18 +6,10 @@
 //
 
 import UIKit
+import SwiftUI
 import LanguageManager_iOS
 
 class SettingsViewController: UIViewController {
-    
-    //MARK: - Vars
-    private let tableView : UITableView = {
-        let table = UITableView(frame: .zero, style: .grouped)
-        table.backgroundColor = .clear
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        return table
-    }()
     
     //MARK: - Life Cycle
     override func viewDidLoad() {
@@ -25,15 +17,8 @@ class SettingsViewController: UIViewController {
         setupView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        title = "SETTINGS_TITLE".localized(forLanguageCode: NSLocale.preferredLanguages[0])
-        
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.frame = view.bounds
         configureButtons()
     }
     
@@ -47,41 +32,37 @@ class SettingsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func setupView() {
+    private func setupView() {
+        title = "SETTINGS_TITLE".localized(forLanguageCode: NSLocale.preferredLanguages[0])
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-        view.addSubview(tableView)
+        //view.addSubview(tableView)
         
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
-    
-}
-
-//MARK: - Extension for Tableview Methods
-extension SettingsViewController: UITableViewDelegate,UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell =  tableView.dequeueReusableCell(withIdentifier: "cell")  else {
-            return UITableViewCell()
-        }
-        cell.imageView?.image = UIImage(systemName: "globe",withConfiguration: UIImage.SymbolConfiguration(pointSize: 22))
-        cell.textLabel?.text = "CHANGE_LANGUAGE".localized(forLanguageCode: NSLocale.preferredLanguages[0])
-        cell.textLabel?.font = .systemFont(ofSize: 22)
-        cell.tintColor = .appThemeColor()
-        cell.accessoryType = .disclosureIndicator
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        80
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        addSettingsSwiftUIView()
         
+    }
+    
+    //MARK: - Extension for SettingsView Methods
+    
+    private func addSettingsSwiftUIView() {
+        let child = UIHostingController(rootView: SettingsView())
+        child.view.frame = CGRect(x: 0, y: navigationController?.navigationBar.frame.height ?? 120, width: view.frame.width, height: 70)
+        // First, add the view of the child to the view of the parent
+        self.view.addSubview(child.view)
+        // Then, add the child to the parent
+        self.addChild(child)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        child.view.addGestureRecognizer(tap)
+    }
+    
+    // didTap on changeLanguage
+    @objc private func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        showAlert()
+    }
+    
+    //MARK: - Change Language
+    
+    private func showAlert() {
         let alert = UIAlertController(title: "CHANGE_LANGUAGE".localized(forLanguageCode: NSLocale.preferredLanguages[0]), message: "CHOOSE_LANGUAGE".localized(forLanguageCode: NSLocale.preferredLanguages[0]), preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: "English", style: .default, handler: { [weak self] (action) in

@@ -8,7 +8,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import ProgressHUD
 import Alamofire
 
 protocol SettingsButtonActionDelegate {
@@ -49,7 +48,7 @@ class HomeViewController: UIViewController {
     
     //MARK: - Customize Header  for the TableView
     func configureHeaderView() {
-        let  headerView = ExerciseHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height / 7))
+        let  headerView = ExerciseHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height / 5))
         headerView.delegate = self
         tableView.tableHeaderView = headerView
     }
@@ -57,9 +56,11 @@ class HomeViewController: UIViewController {
     //MARK: - View Model Configuration
     private func configureViewModel() {
         exerciseViewModel = ExerciseViewModel()
+        self.showLoading()
         exerciseViewModel?.getExerciseData(completion: { [weak self] isSuccess in
             self?.exerciseViewModel?.getExerciseImages(completion: { [weak self] isSuccess in
                 self?.bindTableViewWithExercise()
+                self?.hideLoading()
             })
         })
     }
@@ -110,7 +111,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController : UITableViewDelegate {
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 80
     }
     
 }

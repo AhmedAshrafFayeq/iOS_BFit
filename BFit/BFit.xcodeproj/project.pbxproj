@@ -44,6 +44,7 @@
 		5B5558A828953FC900102E87 /* Bundle+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558A728953FC900102E87 /* Bundle+UnitTest.swift */; };
 		5B5558AB2895400600102E87 /* ExerciseAPIMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B5558AA2895400600102E87 /* ExerciseAPIMock.json */; };
 		5B5558AD289564CA00102E87 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558AC289564CA00102E87 /* SettingsView.swift */; };
+		5BDDDE0C289581B400C2F228 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE0B289581B400C2F228 /* UIViewController+Extension.swift */; };
 		9109A685C408FE62234E2F22 /* Pods_BFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028747C4817147153331C77 /* Pods_BFitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		5B5558A728953FC900102E87 /* Bundle+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+UnitTest.swift"; sourceTree = "<group>"; };
 		5B5558AA2895400600102E87 /* ExerciseAPIMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExerciseAPIMock.json; sourceTree = "<group>"; };
 		5B5558AC289564CA00102E87 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5BDDDE0B289581B400C2F228 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		5E92FBACB420DC76186E7A6B /* Pods-BFitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFitTests.release.xcconfig"; path = "Target Support Files/Pods-BFitTests/Pods-BFitTests.release.xcconfig"; sourceTree = "<group>"; };
 		9AFD0CE79DFA57C43AE6F0DD /* Pods-BFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFit.debug.xcconfig"; path = "Target Support Files/Pods-BFit/Pods-BFit.debug.xcconfig"; sourceTree = "<group>"; };
 		B028747C4817147153331C77 /* Pods_BFitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -302,6 +304,7 @@
 				5B55587E28945D4300102E87 /* UIColor+Extension.swift */,
 				5B55587B28943D8300102E87 /* String+Extension.swift */,
 				5B5558802894635D00102E87 /* UIView+Extension.swift */,
+				5BDDDE0B289581B400C2F228 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				5B16B13828904FC800AF42D9 /* ExerciseViewModel.swift in Sources */,
 				5B16B142289068F900AF42D9 /* ExerciseImageNetworking.swift in Sources */,
 				5B16B13D2890687800AF42D9 /* ExcerciseImagesResponse.swift in Sources */,
+				5BDDDE0C289581B400C2F228 /* UIViewController+Extension.swift in Sources */,
 				5B5558AD289564CA00102E87 /* SettingsView.swift in Sources */,
 				5B145CC32892FEFD001A6F4B /* ExerciseDetailViewModel.swift in Sources */,
 				5B16B14828921CC000AF42D9 /* ExerciseDetailViewController.swift in Sources */,
@@ -734,7 +738,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BFit/Info.plist;
+				INFOPLIST_FILE = BFit/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -762,7 +766,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BFit/Info.plist;
+				INFOPLIST_FILE = BFit/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
