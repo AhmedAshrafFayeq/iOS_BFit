@@ -95,7 +95,7 @@ class ExerciseDetailViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollView.frame = CGRect(x: 0, y: 60, width: view.frame.size.width, height: view.frame.size.height)
+        scrollView.frame = CGRect(x: 0, y: navigationController?.navigationBar.frame.height ?? 70, width: view.bounds.size.width, height: view.bounds.size.height)
         scrollContentView.frame = scrollView.bounds
         scrollView.contentSize = CGSize(width: view.frame.size.width, height: view.frame.size.height)
     }
@@ -150,7 +150,7 @@ class ExerciseDetailViewController: UIViewController {
             exerciseDescriptionLabel.leadingAnchor.constraint(equalTo: scrollContentView.leadingAnchor,constant: 20),
             exerciseDescriptionLabel.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor,constant: -20),
             exerciseDescriptionLabel.topAnchor.constraint(equalTo: placeholderImageView.bottomAnchor,constant: 20),
-            
+            exerciseDescriptionLabel.bottomAnchor.constraint(equalTo: variationsCollectionView.topAnchor,constant: 20),
             
             variationsCollectionView.leadingAnchor.constraint(equalTo: scrollContentView.leadingAnchor,constant: 20),
             variationsCollectionView.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor,constant: -20),

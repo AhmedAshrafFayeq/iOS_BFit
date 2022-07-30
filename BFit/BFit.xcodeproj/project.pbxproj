@@ -45,6 +45,37 @@
 		5B5558AD289564CA00102E87 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558AC289564CA00102E87 /* SettingsView.swift */; };
 		5BDDDE0C289581B400C2F228 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE0B289581B400C2F228 /* UIViewController+Extension.swift */; };
 		5BDDDE0E289598EB00C2F228 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE0D289598EB00C2F228 /* BaseViewModel.swift */; };
+		5BDDDE102895BE6100C2F228 /* MockExercsieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE0F2895BE6100C2F228 /* MockExercsieAPI.swift */; };
+		5BDDDE112895BE8200C2F228 /* ExercisesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B12D289033A200AF42D9 /* ExercisesAPI.swift */; };
+		5BDDDE122895BECC00C2F228 /* ExerciseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B133289049D700AF42D9 /* ExerciseResponse.swift */; };
+		5BDDDE132895BED000C2F228 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B1432891D63000AF42D9 /* HomeModel.swift */; };
+		5BDDDE142895BED700C2F228 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B127289032BC00AF42D9 /* BaseAPI.swift */; };
+		5BDDDE152895BEDA00C2F228 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B129289032D900AF42D9 /* TargetType.swift */; };
+		5BDDDE162895BEDE00C2F228 /* ExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B13728904FC800AF42D9 /* ExerciseViewModel.swift */; };
+		5BDDDE172895BEE600C2F228 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE0D289598EB00C2F228 /* BaseViewModel.swift */; };
+		5BDDDE182895BEEC00C2F228 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B117288F169D00AF42D9 /* HomeViewController.swift */; };
+		5BDDDE192895BEEE00C2F228 /* ExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B14728921CC000AF42D9 /* ExerciseDetailViewController.swift */; };
+		5BDDDE1A2895BEF100C2F228 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CC928943AE6001A6F4B /* SettingsViewController.swift */; };
+		5BDDDE1B2895C46A00C2F228 /* ExercisesNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B12F289033C900AF42D9 /* ExercisesNetworking.swift */; };
+		5BDDDE1C2895C46E00C2F228 /* ExerciseImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B13F289068EA00AF42D9 /* ExerciseImageAPI.swift */; };
+		5BDDDE1D2895C47100C2F228 /* ExerciseImageNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B141289068F900AF42D9 /* ExerciseImageNetworking.swift */; };
+		5BDDDE1E2895C47500C2F228 /* ExerciseInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CBC2892FC70001A6F4B /* ExerciseInfoAPI.swift */; };
+		5BDDDE1F2895C47700C2F228 /* ExerciseInfoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CBE2892FC82001A6F4B /* ExerciseInfoNetworking.swift */; };
+		5BDDDE202895C49D00C2F228 /* ExerciseInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CC02892FD32001A6F4B /* ExerciseInfoResponse.swift */; };
+		5BDDDE212895C4A000C2F228 /* ExcerciseImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B13C2890687800AF42D9 /* ExcerciseImagesResponse.swift */; };
+		5BDDDE222895C4B700C2F228 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B13A28905FDB00AF42D9 /* ExerciseTableViewCell.swift */; };
+		5BDDDE232895C4CA00C2F228 /* ExerciseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B1452892177F00AF42D9 /* ExerciseHeaderView.swift */; };
+		5BDDDE242895C4D000C2F228 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CC728941B3E001A6F4B /* Constants.swift */; };
+		5BDDDE252895C4D300C2F228 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55587E28945D4300102E87 /* UIColor+Extension.swift */; };
+		5BDDDE262895C4D800C2F228 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B55587B28943D8300102E87 /* String+Extension.swift */; };
+		5BDDDE272895C4DB00C2F228 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558802894635D00102E87 /* UIView+Extension.swift */; };
+		5BDDDE282895C4DD00C2F228 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE0B289581B400C2F228 /* UIViewController+Extension.swift */; };
+		5BDDDE292895C4F100C2F228 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558AC289564CA00102E87 /* SettingsView.swift */; };
+		5BDDDE2A2895C4F700C2F228 /* ExerciseImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B1492892229100AF42D9 /* ExerciseImageCollectionViewCell.swift */; };
+		5BDDDE2B2895C4FA00C2F228 /* ExerciseVariationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CC428931537001A6F4B /* ExerciseVariationCollectionViewCell.swift */; };
+		5BDDDE2C2895C50500C2F228 /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CC22892FEFD001A6F4B /* ExerciseDetailViewModel.swift */; };
+		5BDDDE2D2895C50900C2F228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B101288F149500AF42D9 /* AppDelegate.swift */; };
+		5BDDDE2E2895C50B00C2F228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B103288F149500AF42D9 /* SceneDelegate.swift */; };
 		9109A685C408FE62234E2F22 /* Pods_BFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028747C4817147153331C77 /* Pods_BFitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +134,7 @@
 		5B5558AC289564CA00102E87 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5BDDDE0B289581B400C2F228 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		5BDDDE0D289598EB00C2F228 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		5BDDDE0F2895BE6100C2F228 /* MockExercsieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExercsieAPI.swift; sourceTree = "<group>"; };
 		5E92FBACB420DC76186E7A6B /* Pods-BFitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFitTests.release.xcconfig"; path = "Target Support Files/Pods-BFitTests/Pods-BFitTests.release.xcconfig"; sourceTree = "<group>"; };
 		9AFD0CE79DFA57C43AE6F0DD /* Pods-BFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFit.debug.xcconfig"; path = "Target Support Files/Pods-BFit/Pods-BFit.debug.xcconfig"; sourceTree = "<group>"; };
 		B028747C4817147153331C77 /* Pods_BFitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,8 +344,8 @@
 		5B5558872894AE4B00102E87 /* BFitTests */ = {
 			isa = PBXGroup;
 			children = (
-				5B5558A928953FE600102E87 /* APIMocking */,
 				5B5558A628953FA900102E87 /* Extensions */,
+				5B5558A928953FE600102E87 /* APIMocking */,
 				5B5558A328953F8100102E87 /* ExerciseNetworking */,
 				5B5558882894AE4B00102E87 /* BFitTests.swift */,
 			);
@@ -324,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				5B5558A428953F9F00102E87 /* ExerciseAPITest.swift */,
+				5BDDDE0F2895BE6100C2F228 /* MockExercsieAPI.swift */,
 			);
 			path = ExerciseNetworking;
 			sourceTree = "<group>";
@@ -572,9 +605,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDDDE2D2895C50900C2F228 /* AppDelegate.swift in Sources */,
+				5BDDDE2A2895C4F700C2F228 /* ExerciseImageCollectionViewCell.swift in Sources */,
+				5BDDDE122895BECC00C2F228 /* ExerciseResponse.swift in Sources */,
+				5BDDDE172895BEE600C2F228 /* BaseViewModel.swift in Sources */,
+				5BDDDE102895BE6100C2F228 /* MockExercsieAPI.swift in Sources */,
 				5B5558A528953F9F00102E87 /* ExerciseAPITest.swift in Sources */,
+				5BDDDE282895C4DD00C2F228 /* UIViewController+Extension.swift in Sources */,
+				5BDDDE2E2895C50B00C2F228 /* SceneDelegate.swift in Sources */,
+				5BDDDE1E2895C47500C2F228 /* ExerciseInfoAPI.swift in Sources */,
+				5BDDDE152895BEDA00C2F228 /* TargetType.swift in Sources */,
+				5BDDDE262895C4D800C2F228 /* String+Extension.swift in Sources */,
+				5BDDDE132895BED000C2F228 /* HomeModel.swift in Sources */,
+				5BDDDE232895C4CA00C2F228 /* ExerciseHeaderView.swift in Sources */,
+				5BDDDE1C2895C46E00C2F228 /* ExerciseImageAPI.swift in Sources */,
+				5BDDDE252895C4D300C2F228 /* UIColor+Extension.swift in Sources */,
+				5BDDDE202895C49D00C2F228 /* ExerciseInfoResponse.swift in Sources */,
+				5BDDDE272895C4DB00C2F228 /* UIView+Extension.swift in Sources */,
+				5BDDDE2C2895C50500C2F228 /* ExerciseDetailViewModel.swift in Sources */,
+				5BDDDE1F2895C47700C2F228 /* ExerciseInfoNetworking.swift in Sources */,
 				5B5558A828953FC900102E87 /* Bundle+UnitTest.swift in Sources */,
+				5BDDDE1B2895C46A00C2F228 /* ExercisesNetworking.swift in Sources */,
+				5BDDDE162895BEDE00C2F228 /* ExerciseViewModel.swift in Sources */,
+				5BDDDE292895C4F100C2F228 /* SettingsView.swift in Sources */,
+				5BDDDE222895C4B700C2F228 /* ExerciseTableViewCell.swift in Sources */,
+				5BDDDE142895BED700C2F228 /* BaseAPI.swift in Sources */,
+				5BDDDE1A2895BEF100C2F228 /* SettingsViewController.swift in Sources */,
+				5BDDDE192895BEEE00C2F228 /* ExerciseDetailViewController.swift in Sources */,
 				5B5558892894AE4B00102E87 /* BFitTests.swift in Sources */,
+				5BDDDE212895C4A000C2F228 /* ExcerciseImagesResponse.swift in Sources */,
+				5BDDDE1D2895C47100C2F228 /* ExerciseImageNetworking.swift in Sources */,
+				5BDDDE112895BE8200C2F228 /* ExercisesAPI.swift in Sources */,
+				5BDDDE2B2895C4FA00C2F228 /* ExerciseVariationCollectionViewCell.swift in Sources */,
+				5BDDDE182895BEEC00C2F228 /* HomeViewController.swift in Sources */,
+				5BDDDE242895C4D000C2F228 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

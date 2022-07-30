@@ -43,7 +43,6 @@ extension ExerciseDetailViewModel: ExerciseDetailViewModelProtocol {
                 
                 self.exerciseImages = response?.results.first?.images ?? []
                 self.exerciseInfoBehaviorSubject.on(.next(response?.results.first?.images ?? []))
-              //  self.images = self.exerciseBehaviorSubject.filter{$0.first?.id == self.images.first?.id}
                 completion(true)
                 
             case .failure(let error):

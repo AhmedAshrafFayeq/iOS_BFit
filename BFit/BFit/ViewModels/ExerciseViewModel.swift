@@ -29,10 +29,10 @@ class ExerciseViewModel: BaseViewModel {
     var exerciseImageAPI: ExerciseImageAPIProtocol?
     var homeModelList = [HomeModel]()
     
-    //MARK: - Initialzer
-    override init() {
+    //MARK: - Initial
+    init( exerciseAPI: ExercisesAPIProtocol  = ExercisesAPI()) {
         super.init()
-        exerciseAPI = ExercisesAPI()
+        self.exerciseAPI = exerciseAPI
         exerciseImageAPI = ExerciseImageAPI()
         combineExerciseData()
     }
