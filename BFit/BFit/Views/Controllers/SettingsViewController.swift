@@ -100,8 +100,7 @@ extension SettingsViewController: UITableViewDelegate,UITableViewDataSource {
         present(alert, animated: true, completion: nil)
     }
     
-    
-    private   func changeLanguage (selectedLanguage :Languages?) {
+    private func changeLanguage (selectedLanguage :Languages?) {
         DispatchQueue.main.async {
             // change the language
             LanguageManager.shared.setLanguage(language: selectedLanguage ?? .en)
@@ -117,7 +116,6 @@ extension SettingsViewController: UITableViewDelegate,UITableViewDataSource {
                 
             }
         }
-        
     }
     
 }

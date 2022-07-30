@@ -103,7 +103,8 @@ class ExerciseDetailViewController: UIViewController {
     
     //MARK: - Navbar Configuration
     func configureNavBar() {
-        // set the left buton to the navBar
+        // set the left buton and title to the navBar
+        navigationItem.title = model?.exercise.name
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .done, target: self, action: #selector(didTabBackButton))
         navigationController?.navigationBar.tintColor = .appThemeColor()
     }
