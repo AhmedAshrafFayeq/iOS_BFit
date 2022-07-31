@@ -9,6 +9,7 @@
 
 /* Header View */
 "TOP_EXERCISES_LABEL_TITLE" = "Top Übungen";
+"TOP_EXERCISES_LABEL_SUBTITLE" = "Übung auswählen, um weitere Informationen zu erhalten.";
 
 
 /* Settins View Controller*/
