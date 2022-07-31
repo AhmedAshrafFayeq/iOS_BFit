@@ -71,8 +71,6 @@
 		5BDDDE2A2895C4F700C2F228 /* ExerciseImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B1492892229100AF42D9 /* ExerciseImageCollectionViewCell.swift */; };
 		5BDDDE2B2895C4FA00C2F228 /* ExerciseVariationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CC428931537001A6F4B /* ExerciseVariationCollectionViewCell.swift */; };
 		5BDDDE2C2895C50500C2F228 /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B145CC22892FEFD001A6F4B /* ExerciseDetailViewModel.swift */; };
-		5BDDDE2D2895C50900C2F228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B101288F149500AF42D9 /* AppDelegate.swift */; };
-		5BDDDE2E2895C50B00C2F228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16B103288F149500AF42D9 /* SceneDelegate.swift */; };
 		5BDDDE302896001B00C2F228 /* ImageAPIMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BDDDE2F2896001B00C2F228 /* ImageAPIMock.json */; };
 		5BDDDE33289600C000C2F228 /* MockExerciseImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE32289600C000C2F228 /* MockExerciseImageAPI.swift */; };
 		5BDDDE352896019700C2F228 /* ExerciseImageAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE342896019700C2F228 /* ExerciseImageAPITest.swift */; };
@@ -80,6 +78,8 @@
 		5BDDDE3C289611A600C2F228 /* MockExerciseInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE3B289611A600C2F228 /* MockExerciseInfoAPI.swift */; };
 		5BDDDE3E2896126800C2F228 /* ExerciseInfoAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE3D2896126800C2F228 /* ExerciseInfoAPITest.swift */; };
 		5BDDDE40289615D800C2F228 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE3F289615D800C2F228 /* HomeHeaderView.swift */; };
+		5BDDDE432896A79300C2F228 /* ExerciseViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE422896A79300C2F228 /* ExerciseViewModelTest.swift */; };
+		5BDDDE452896A95500C2F228 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE3F289615D800C2F228 /* HomeHeaderView.swift */; };
 		9109A685C408FE62234E2F22 /* Pods_BFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028747C4817147153331C77 /* Pods_BFitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +144,7 @@
 		5BDDDE3B289611A600C2F228 /* MockExerciseInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExerciseInfoAPI.swift; sourceTree = "<group>"; };
 		5BDDDE3D2896126800C2F228 /* ExerciseInfoAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInfoAPITest.swift; sourceTree = "<group>"; };
 		5BDDDE3F289615D800C2F228 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		5BDDDE422896A79300C2F228 /* ExerciseViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewModelTest.swift; sourceTree = "<group>"; };
 		5E92FBACB420DC76186E7A6B /* Pods-BFitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFitTests.release.xcconfig"; path = "Target Support Files/Pods-BFitTests/Pods-BFitTests.release.xcconfig"; sourceTree = "<group>"; };
 		9AFD0CE79DFA57C43AE6F0DD /* Pods-BFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFit.debug.xcconfig"; path = "Target Support Files/Pods-BFit/Pods-BFit.debug.xcconfig"; sourceTree = "<group>"; };
 		B028747C4817147153331C77 /* Pods_BFitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BFitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,8 +227,6 @@
 				5B16B1242890325F00AF42D9 /* NetworkLayer */,
 				5B16B115288F167100AF42D9 /* Views */,
 				5B16B13528904F9600AF42D9 /* ViewModels */,
-				5B16B101288F149500AF42D9 /* AppDelegate.swift */,
-				5B16B103288F149500AF42D9 /* SceneDelegate.swift */,
 				5B5558AF289565B600102E87 /* Resources */,
 			);
 			path = BFit;
@@ -357,6 +356,7 @@
 				5BDDDE312896004D00C2F228 /* ExerciseImageNetworking */,
 				5BDDDE3A2896116F00C2F228 /* ExerciseInfoNetworking */,
 				5B5558A628953FA900102E87 /* Extensions */,
+				5BDDDE442896A7AA00C2F228 /* ViewModel */,
 			);
 			path = BFitTests;
 			sourceTree = "<group>";
@@ -391,6 +391,8 @@
 		5B5558AF289565B600102E87 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5B16B101288F149500AF42D9 /* AppDelegate.swift */,
+				5B16B103288F149500AF42D9 /* SceneDelegate.swift */,
 				5B16B10A288F149700AF42D9 /* Assets.xcassets */,
 				5B16B10C288F149700AF42D9 /* LaunchScreen.storyboard */,
 				5B16B10F288F149700AF42D9 /* Info.plist */,
@@ -423,6 +425,14 @@
 				5B5558AC289564CA00102E87 /* SettingsView.swift */,
 			);
 			path = SwiftUIViews;
+			sourceTree = "<group>";
+		};
+		5BDDDE442896A7AA00C2F228 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5BDDDE422896A79300C2F228 /* ExerciseViewModelTest.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B7E9232F8A3B4612CE2D63E6 /* Pods */ = {
@@ -646,7 +656,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BDDDE3E2896126800C2F228 /* ExerciseInfoAPITest.swift in Sources */,
-				5BDDDE2D2895C50900C2F228 /* AppDelegate.swift in Sources */,
 				5BDDDE2A2895C4F700C2F228 /* ExerciseImageCollectionViewCell.swift in Sources */,
 				5BDDDE122895BECC00C2F228 /* ExerciseResponse.swift in Sources */,
 				5BDDDE172895BEE600C2F228 /* BaseViewModel.swift in Sources */,
@@ -654,10 +663,11 @@
 				5B5558A528953F9F00102E87 /* ExerciseAPITest.swift in Sources */,
 				5BDDDE33289600C000C2F228 /* MockExerciseImageAPI.swift in Sources */,
 				5BDDDE282895C4DD00C2F228 /* UIViewController+Extension.swift in Sources */,
-				5BDDDE2E2895C50B00C2F228 /* SceneDelegate.swift in Sources */,
 				5BDDDE1E2895C47500C2F228 /* ExerciseInfoAPI.swift in Sources */,
 				5BDDDE352896019700C2F228 /* ExerciseImageAPITest.swift in Sources */,
 				5BDDDE152895BEDA00C2F228 /* TargetType.swift in Sources */,
+				5BDDDE432896A79300C2F228 /* ExerciseViewModelTest.swift in Sources */,
+				5BDDDE452896A95500C2F228 /* HomeHeaderView.swift in Sources */,
 				5BDDDE262895C4D800C2F228 /* String+Extension.swift in Sources */,
 				5BDDDE132895BED000C2F228 /* HomeModel.swift in Sources */,
 				5BDDDE1C2895C46E00C2F228 /* ExerciseImageAPI.swift in Sources */,

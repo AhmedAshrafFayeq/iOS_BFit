@@ -9,7 +9,6 @@ import UIKit
 import SDWebImage
 import RxSwift
 import RxCocoa
-import ProgressHUD
 
 class ExerciseDetailViewController: UIViewController {
     
@@ -128,7 +127,6 @@ class ExerciseDetailViewController: UIViewController {
     
     private func configureConstraints() {
         NSLayoutConstraint.activate([
-            
             exerciseNameLabel.leadingAnchor.constraint(equalTo: scrollContentView.leadingAnchor,constant: 16),
             exerciseNameLabel.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor,constant: -16),
             exerciseNameLabel.topAnchor.constraint(equalTo: scrollContentView.topAnchor,constant: 50),
@@ -156,7 +154,6 @@ class ExerciseDetailViewController: UIViewController {
             variationsCollectionView.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor,constant: -20),
             variationsCollectionView.topAnchor.constraint(equalTo: exerciseDescriptionLabel.bottomAnchor,constant: 20),
             variationsCollectionView.heightAnchor.constraint(equalToConstant: 300),
-            
         ])
     }
     

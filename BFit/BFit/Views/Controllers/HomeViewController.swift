@@ -29,7 +29,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -46,7 +45,7 @@ class HomeViewController: UIViewController {
     }
     
     //MARK: - Customize Header  for the TableView
-    func configureHeaderView() {
+    private func configureHeaderView() {
         child = UIHostingController(rootView: HeaderView(showSettingsView: {
             self.didTabSettingsButton()
         }))
@@ -59,16 +58,11 @@ class HomeViewController: UIViewController {
         })))
     }
     //MARK: - Settings button method
-    func didTabSettingsButton() {
+    private func didTabSettingsButton() {
         let settingsVC = SettingsViewController()
         settingsVC.modalPresentationStyle = .fullScreen
         let navgation = UINavigationController(rootViewController: settingsVC)
         present(navgation, animated: true, completion: nil)
-        
-    }
-    
-    //MARK: - Extension for SettingsView Methods
-    private func addSettingsSwiftUIView() {
         
     }
     
