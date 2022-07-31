@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 
 class ExerciseVariationCollectionViewCell: UICollectionViewCell {
+    
    //MARK: - Vars
     static let identifier = "ExerciseVariationCollectionViewCell"
 

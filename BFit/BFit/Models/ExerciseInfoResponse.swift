@@ -14,7 +14,7 @@ struct ExerciseInfoResponse: Codable {
     let results: [ExerciseInfo]
 }
 
-// MARK: - Result
+// MARK: - ExerciseInfo
 struct ExerciseInfo: Codable {
     let id: Int
     let name, uuid: String

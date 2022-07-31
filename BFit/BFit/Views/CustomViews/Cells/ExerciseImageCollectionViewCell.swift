@@ -16,7 +16,7 @@ class ExerciseImageCollectionViewCell: UICollectionViewCell {
     private let exerciseImageView : UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleToFill
-        image.image = UIImage(systemName: "heart")
+        image.image = UIImage(named: "placeholder")
         image.layer.cornerRadius = 12
         image.clipsToBounds = true
         image.translatesAutoresizingMaskIntoConstraints = false

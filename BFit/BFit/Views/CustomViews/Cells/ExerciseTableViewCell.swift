@@ -71,12 +71,8 @@ class ExerciseTableViewCell: UITableViewCell {
     //MARK: - Cell Configuration
     func configureCell(model: HomeModel){
         self.exerciseNameLabel.text = model.exercise.name
-        if let url = URL(string: model.image.image) {
-//            imgView.sd_setShowActivityIndicatorView(true)
-//            imgView.sd_setIndicatorStyle(.gray)
-            self.exerciseImageView.sd_setImage(with: url, completed: nil)
-        }else {
-            self.exerciseImageView.image = UIImage(named: "placeholder")
-        }
+        exerciseImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        exerciseImageView.sd_setImage(with: URL(string: model.image.image), placeholderImage: UIImage(named: "placeholder"))
+        
     }
 }
