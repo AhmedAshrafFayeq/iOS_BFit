@@ -36,10 +36,7 @@ class SettingsViewController: UIViewController {
         title = "SETTINGS_TITLE".localized(forLanguageCode: NSLocale.preferredLanguages[0])
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
-        //view.addSubview(tableView)
-        
         addSettingsSwiftUIView()
-        
     }
     
     //MARK: - Extension for SettingsView Methods
@@ -73,9 +70,7 @@ class SettingsViewController: UIViewController {
             UserDefaults.standard.synchronize()
             self?.changeLanguage(selectedLanguage: .de)
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { [weak self](action) in
-            self?.dismiss(animated: true, completion: nil)
-        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true, completion: nil)
     }
     
@@ -84,15 +79,14 @@ class SettingsViewController: UIViewController {
             // change the language
             LanguageManager.shared.setLanguage(language: selectedLanguage ?? .en)
             {  title -> UIViewController in
-                let vc = HomeViewController()
                 
                 // the view controller that you want to show after changing the language
+                let vc = HomeViewController()
                 return vc
             } animation: { view in
                 // do custom animation
                 view.transform = CGAffineTransform(scaleX: 2, y: 2)
                 view.alpha = 0
-                
             }
         }
     }

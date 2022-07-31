@@ -31,13 +31,13 @@ struct ExerciseInfo: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, name, uuid
-        case exerciseBaseID = "exercise_base_id"
+        case exerciseBaseID      = "exercise_base_id"
         case exerciseDescription = "description"
-        case creationDate = "creation_date"
+        case creationDate        = "creation_date"
+        case musclesSecondary    = "muscles_secondary"
+        case licenseAuthor       = "license_author"
         case category, muscles
-        case musclesSecondary = "muscles_secondary"
         case equipment, language, license
-        case licenseAuthor = "license_author"
         case images, comments, variations
     }
 }
@@ -62,8 +62,8 @@ struct Language: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id
-        case shortName = "short_name"
-        case fullName = "full_name"
+        case shortName  = "short_name"
+        case fullName   = "full_name"
         case url
     }
 }
@@ -77,10 +77,10 @@ struct Muscle: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, name
-        case isFront = "is_front"
-        case nameEn = "name_en"
-        case imageURLMain = "image_url_main"
-        case imageURLSecondary = "image_url_secondary"
+        case isFront            = "is_front"
+        case nameEn             = "name_en"
+        case imageURLMain       = "image_url_main"
+        case imageURLSecondary  = "image_url_secondary"
     }
 }
 

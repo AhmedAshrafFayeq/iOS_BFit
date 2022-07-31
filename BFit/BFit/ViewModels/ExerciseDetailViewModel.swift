@@ -10,12 +10,9 @@ import RxSwift
 import RxCocoa
 
 protocol ExerciseDetailViewModelProtocol {
-    
     var exerciseInfoBehaviorSubject: BehaviorSubject<[Image]> { get }
-    
     func getExerciseInfoData(completion : @escaping (Bool)-> Void)
 }
-
 
 class ExerciseDetailViewModel: BaseViewModel {
     
@@ -51,5 +48,4 @@ extension ExerciseDetailViewModel: ExerciseDetailViewModelProtocol {
             }
         })
     }
-    
 }

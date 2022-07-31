@@ -43,6 +43,9 @@ class ExerciseViewModelTest: XCTestCase {
                 self?.exerciseViewModel?.combineExerciseData()
                 XCTAssertNotNil(self?.exerciseViewModel?.homeModelList.first?.exercise)
                 XCTAssertNotNil(self?.exerciseViewModel?.homeModelList.first?.image)
+                
+                XCTAssertEqual(self?.exerciseViewModel?.homeModelList[2].exercise.name, "Axe Hold")
+                XCTAssertEqual(self?.exerciseViewModel?.homeModelList[2].image.image, "https://wger.de/media/exercise-images/128/Hyperextensions-1.png")
             })
         })
     }

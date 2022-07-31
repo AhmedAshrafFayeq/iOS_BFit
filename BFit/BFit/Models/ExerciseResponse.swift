@@ -28,13 +28,13 @@ struct Exercise: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, uuid, name
-        case exerciseBase = "exercise_base"
-        case exerciseDescription = "description"
-        case creationDate = "creation_date"
+        case exerciseBase           = "exercise_base"
+        case exerciseDescription    = "description"
+        case creationDate           = "creation_date"
+        case musclesSecondary       = "muscles_secondary"
+        case licenseAuthor          = "license_author"
         case category, muscles
-        case musclesSecondary = "muscles_secondary"
         case equipment, language, license
-        case licenseAuthor = "license_author"
         case variations
     }
 }

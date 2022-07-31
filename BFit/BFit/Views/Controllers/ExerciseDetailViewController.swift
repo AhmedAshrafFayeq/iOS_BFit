@@ -51,6 +51,7 @@ class ExerciseDetailViewController: UIViewController {
         return collectionView
     }()
     
+    //in case of no images show the exercise image instead
     private let placeholderImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit

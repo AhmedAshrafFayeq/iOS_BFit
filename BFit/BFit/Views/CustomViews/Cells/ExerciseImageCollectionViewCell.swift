@@ -49,5 +49,4 @@ class ExerciseImageCollectionViewCell: UICollectionViewCell {
         exerciseImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         exerciseImageView.sd_setImage(with: URL(string: image), placeholderImage: UIImage(named: "placeholder"))
     }
-    
 }

@@ -355,8 +355,8 @@
 				5B5558A328953F8100102E87 /* ExerciseNetworking */,
 				5BDDDE312896004D00C2F228 /* ExerciseImageNetworking */,
 				5BDDDE3A2896116F00C2F228 /* ExerciseInfoNetworking */,
-				5B5558A628953FA900102E87 /* Extensions */,
 				5BDDDE442896A7AA00C2F228 /* ViewModel */,
+				5B5558A628953FA900102E87 /* Extensions */,
 			);
 			path = BFitTests;
 			sourceTree = "<group>";

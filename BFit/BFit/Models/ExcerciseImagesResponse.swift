@@ -26,8 +26,8 @@ struct Image: Codable {
     enum CodingKeys: String, CodingKey {
         case id, uuid
         case exerciseBase = "exercise_base"
+        case isMain       = "is_main"
         case image
-        case isMain = "is_main"
         case status, style
     }
 }

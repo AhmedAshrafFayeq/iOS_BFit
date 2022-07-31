@@ -10,7 +10,6 @@ import RxSwift
 import RxCocoa
 
 protocol ExerciseViewModelProtocol {
-    
     var exerciseBehaviorSubject: BehaviorSubject<[Exercise]> { get }
     var exerciseImageBehaviorSubject: BehaviorSubject<[Image]> { get }
     var exerciseCombineBehaviourSubject: BehaviorSubject<[HomeModel]> {get}
@@ -83,6 +82,7 @@ extension ExerciseViewModel: ExerciseViewModelProtocol {
         })
     }
     
+    // combine Exercise with the right Images
     func combineExerciseData() {
         var exercisesVariation = [HomeModel]()
         Observable.combineLatest(exerciseBehaviorSubject, exerciseImageBehaviorSubject).map { exercises, images in
