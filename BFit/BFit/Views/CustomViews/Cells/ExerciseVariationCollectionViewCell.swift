@@ -57,7 +57,7 @@ class ExerciseVariationCollectionViewCell: UICollectionViewCell {
             exerciseImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             exerciseImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             exerciseImageView.heightAnchor.constraint(equalToConstant: 150),
-            exerciseImageView.widthAnchor.constraint(equalToConstant: 150),
+            exerciseImageView.widthAnchor.constraint(equalToConstant: contentView.frame.size.width - 20),
             
             exersiseNameLabel.topAnchor.constraint(equalTo: exerciseImageView.bottomAnchor,constant: 8),
             exersiseNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10),

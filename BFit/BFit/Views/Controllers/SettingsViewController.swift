@@ -43,7 +43,6 @@ class SettingsViewController: UIViewController {
     }
     
     //MARK: - Extension for SettingsView Methods
-    
     private func addSettingsSwiftUIView() {
         let child = UIHostingController(rootView: SettingsView())
         child.view.frame = CGRect(x: 0, y: navigationController?.navigationBar.frame.height ?? 120, width: view.frame.width, height: 70)
@@ -61,7 +60,6 @@ class SettingsViewController: UIViewController {
     }
     
     //MARK: - Change Language
-    
     private func showAlert() {
         let alert = UIAlertController(title: "CHANGE_LANGUAGE".localized(forLanguageCode: NSLocale.preferredLanguages[0]), message: "CHOOSE_LANGUAGE".localized(forLanguageCode: NSLocale.preferredLanguages[0]), preferredStyle: .actionSheet)
         

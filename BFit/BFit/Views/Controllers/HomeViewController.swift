@@ -48,7 +48,7 @@ class HomeViewController: UIViewController {
     
     //MARK: - Customize Header  for the TableView
     func configureHeaderView() {
-        let  headerView = ExerciseHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height / 5))
+        let  headerView = ExerciseHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 180))
         headerView.delegate = self
         tableView.tableHeaderView = headerView
     }

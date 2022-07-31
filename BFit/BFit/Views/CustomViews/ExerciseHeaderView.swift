@@ -71,8 +71,8 @@ class ExerciseHeaderView: UIView {
             logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 5),
             logoImageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: -5),
             logoImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -25),
-            logoImageView.widthAnchor.constraint(equalToConstant: 90),
-            logoImageView.heightAnchor.constraint(equalToConstant: 90 ),
+            logoImageView.widthAnchor.constraint(equalToConstant: 120),
+            logoImageView.heightAnchor.constraint(equalToConstant: 120 ),
             
             titleLabel.leadingAnchor.constraint(equalTo: logoImageView.leadingAnchor, constant: 15),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
@@ -80,8 +80,8 @@ class ExerciseHeaderView: UIView {
 
             settingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             settingButton.centerYAnchor.constraint(equalTo: logoImageView.centerYAnchor),
-            settingButton.widthAnchor.constraint(equalToConstant: 60 ),
-            settingButton.heightAnchor.constraint(equalToConstant: 60 ),
+            settingButton.widthAnchor.constraint(equalToConstant: 70 ),
+            settingButton.heightAnchor.constraint(equalToConstant: 70 ),
         ])
     }
     
