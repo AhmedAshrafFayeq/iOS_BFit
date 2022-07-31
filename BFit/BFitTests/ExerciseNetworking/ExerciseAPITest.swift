@@ -33,6 +33,7 @@ class ExerciseAPITest: XCTestCase {
             let exercises = self?.exerciseViewModel?.exercises
             //first objct
             XCTAssertEqual(exercises?.first?.name, "2 Handed Kettlebell Swing")
+            XCTAssertEqual(exercises?.first?.exerciseDescription, "<p>Two Handed Russian Style Kettlebell swing</p>")
             XCTAssertEqual(exercises?.first?.id, 345)
             //last object
             XCTAssertEqual(exercises?.last?.name, "Biceps Curls With Barbell")

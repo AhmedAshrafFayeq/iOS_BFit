@@ -17,8 +17,7 @@ class MockExercsieAPI: ExercisesAPIProtocol {
         }
         do {
             if let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                let decodedData = try JSONDecoder().decode(ExerciseResponse.self,
-                                                           from: jsonData)
+                let decodedData = try JSONDecoder().decode(ExerciseResponse.self, from: jsonData)
                 completion(.success( decodedData))
             }
         }catch {
