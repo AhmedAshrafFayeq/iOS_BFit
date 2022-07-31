@@ -25,15 +25,21 @@ class ExerciseAPITest: XCTestCase {
         exerciseViewModel = nil
     }
     
-    
+    // Test Exercises Observable when data changing 
     func testGetExercise() {
-        let promise = XCTestExpectation(description: "Fetch Data Completed")
-        exerciseViewModel?.getExerciseData(completion: { isSuccess in
-            print("Sub B, line: \(#line)", "event: \(self.exerciseViewModel?.exercises)")
+        exerciseViewModel?.getExerciseData(completion: { [weak self] isSuccess in
+            XCTAssertNotNil(self?.exerciseViewModel?.exercises)
+
+            let exercises = self?.exerciseViewModel?.exercises
+            //first objct
+            XCTAssertEqual(exercises?.first?.name, "2 Handed Kettlebell Swing")
+            XCTAssertEqual(exercises?.first?.id, 345)
+            //last object
+            XCTAssertEqual(exercises?.last?.name, "Biceps Curls With Barbell")
+            XCTAssertEqual(exercises?.last?.id, 74)
+            XCTAssertEqual(exercises?.last?.variations, [74,81,80,129,275,298,86,138,193,208,205,768,305])
             
         })
-        promise.fulfill()
-        self.wait(for: [promise], timeout: 1)
     }
 
 }

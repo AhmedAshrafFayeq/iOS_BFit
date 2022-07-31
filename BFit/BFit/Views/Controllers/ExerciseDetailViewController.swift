@@ -96,8 +96,8 @@ class ExerciseDetailViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.frame = CGRect(x: 0, y: navigationController?.navigationBar.frame.height ?? 70, width: view.bounds.size.width, height: view.bounds.size.height)
-        scrollContentView.frame = scrollView.bounds
-        scrollView.contentSize = CGSize(width: view.frame.size.width, height: view.frame.size.height)
+        scrollContentView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.frame.size.height * 1.5)
+        scrollView.contentSize = CGSize(width: view.frame.size.width, height: view.frame.size.height * 1.5)
     }
     
     

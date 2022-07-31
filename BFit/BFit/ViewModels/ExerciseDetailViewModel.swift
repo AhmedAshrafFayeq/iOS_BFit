@@ -24,7 +24,7 @@ class ExerciseDetailViewModel: BaseViewModel {
     var exerciseInfoAPI: ExerciseInfoAPIProtocol?
     
     //MARK: - Initialzer
-    override init() {
+    init(exerciseAPI: ExerciseImageAPIProtocol = ExerciseImageAPI()) {
         super.init()
         exerciseInfoAPI = ExerciseInfoAPI()
     }

@@ -29,11 +29,11 @@ class ExerciseViewModel: BaseViewModel {
     var exerciseImageAPI: ExerciseImageAPIProtocol?
     var homeModelList = [HomeModel]()
     
-    //MARK: - Initial
-    init( exerciseAPI: ExercisesAPIProtocol  = ExercisesAPI()) {
+    //MARK: - Initializer
+    init(exerciseAPI: ExercisesAPIProtocol = ExercisesAPI(), exerciseImageAPI: ExerciseImageAPIProtocol = ExerciseImageAPI()) {
         super.init()
         self.exerciseAPI = exerciseAPI
-        exerciseImageAPI = ExerciseImageAPI()
+        self.exerciseImageAPI = exerciseImageAPI
         combineExerciseData()
     }
 }
