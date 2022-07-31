@@ -6,19 +6,17 @@
 //
 
 import UIKit
+import SwiftUI
 import RxSwift
 import RxCocoa
 import Alamofire
-
-protocol SettingsButtonActionDelegate {
-    func didTabSettingsButton()
-}
 
 class HomeViewController: UIViewController {
     
     //MARK: - Variables
     private var exerciseViewModel: ExerciseViewModelProtocol?
     private let disposeBag = DisposeBag()
+    private var child: UIHostingController<HeaderView>?
     
     private let tableView : UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -31,26 +29,47 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.frame = view.bounds
+        tableView.frame = CGRect(x: 0, y: view.bounds.height / 4.5, width: view.bounds.width, height: view.bounds.height - view.bounds.height / 4.5)
     }
     
     private func setupView() {
         view.backgroundColor = .systemBackground
-        view.addSubview(tableView)
         configureHeaderView()
+        child?.view.addSubview(tableView)
         tableView.delegate = self
         configureViewModel()
     }
     
     //MARK: - Customize Header  for the TableView
     func configureHeaderView() {
-        let  headerView = ExerciseHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 180))
-        headerView.delegate = self
-        tableView.tableHeaderView = headerView
+        child = UIHostingController(rootView: HeaderView(showSettingsView: {
+            self.didTabSettingsButton()
+        }))
+        child?.view.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height )
+        // First, add the view of the child to the view of the parent
+        self.view.addSubview(child?.view ?? UIView())
+        // Then, add the child to the parent
+        self.addChild(child ?? UIHostingController<HeaderView>(rootView: HeaderView(showSettingsView: {
+            self.didTabSettingsButton()
+        })))
+    }
+    //MARK: - Settings button method
+    func didTabSettingsButton() {
+        let settingsVC = SettingsViewController()
+        settingsVC.modalPresentationStyle = .fullScreen
+        let navgation = UINavigationController(rootViewController: settingsVC)
+        present(navgation, animated: true, completion: nil)
+        
+    }
+    
+    //MARK: - Extension for SettingsView Methods
+    private func addSettingsSwiftUIView() {
+        
     }
     
     //MARK: - View Model Configuration
@@ -93,16 +112,4 @@ extension HomeViewController : UITableViewDelegate {
         return 80
     }
     
-}
-
-//MARK: - Extension for Setting Button Delegate
-extension HomeViewController: SettingsButtonActionDelegate {
-
-    func didTabSettingsButton() {
-        let settingsVC = SettingsViewController()
-        settingsVC.modalPresentationStyle = .fullScreen
-        let navgation = UINavigationController(rootViewController: settingsVC)
-        present(navgation, animated: true, completion: nil)
-        
-    }
 }
