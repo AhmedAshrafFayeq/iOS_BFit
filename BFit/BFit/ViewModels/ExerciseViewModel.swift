@@ -13,9 +13,9 @@ protocol ExerciseViewModelProtocol {
     var exerciseBehaviorSubject: BehaviorSubject<[Exercise]> { get }
     var exerciseImageBehaviorSubject: BehaviorSubject<[Image]> { get }
     var exerciseCombineBehaviourSubject: BehaviorSubject<[HomeModel]> {get}
-    
+    var view: HomeViewControllerProtocol? {get set}
     func getExerciseData(completion : @escaping (Bool)-> Void)
-    func getExerciseImages(completion : @escaping (Bool)-> Void)
+    func getExerciseImages(completion : @escaping (Swift.Result<Bool, APIError>)-> Void)
     func combineExerciseData()
 }
 
@@ -27,6 +27,7 @@ class ExerciseViewModel: BaseViewModel {
     var exerciseAPI: ExercisesAPIProtocol?
     var exerciseImageAPI: ExerciseImageAPIProtocol?
     var homeModelList = [HomeModel]()
+    var view: HomeViewControllerProtocol?
     
     //MARK: - Initializer
     init(exerciseAPI: ExercisesAPIProtocol = ExercisesAPI(), exerciseImageAPI: ExerciseImageAPIProtocol = ExerciseImageAPI()) {
@@ -67,17 +68,18 @@ extension ExerciseViewModel: ExerciseViewModelProtocol {
         }
     }
     
-    func getExerciseImages(completion : @escaping (Bool)-> Void) {
+    func getExerciseImages(completion : @escaping (Swift.Result<Bool, APIError>)-> Void) {
         exerciseImageAPI?.getExcerciseImageData(completion: { (result) in
             switch result{
             case .success(let response):
                 self.images = response?.results ?? []
                 self.exerciseImageBehaviorSubject.on(.next(response?.results ?? []))
-                completion(true)
+                completion(.success(true))
                 
             case .failure(let error):
-                print(error.localizedDescription)
-                completion(false)
+                DispatchQueue.main.async {
+                    self.view?.showAlert(with: error.rawValue)
+                }
             }
         })
     }

@@ -11,6 +11,10 @@ import RxSwift
 import RxCocoa
 import Alamofire
 
+protocol HomeViewControllerProtocol {
+    func showAlert(with title: String)
+}
+
 class HomeViewController: UIViewController {
     
     //MARK: - Variables
@@ -69,6 +73,7 @@ class HomeViewController: UIViewController {
     //MARK: - View Model Configuration
     private func configureViewModel() {
         exerciseViewModel = ExerciseViewModel()
+        exerciseViewModel?.view = self
         self.showLoading()
         exerciseViewModel?.getExerciseData(completion: { [weak self] isSuccess in
             self?.exerciseViewModel?.getExerciseImages(completion: { [weak self] isSuccess in
@@ -106,4 +111,12 @@ extension HomeViewController : UITableViewDelegate {
         return 80
     }
     
+}
+
+extension HomeViewController: HomeViewControllerProtocol {
+    func showAlert(with title: String) {
+        self.hideLoading()
+        let alert = UIAlertController(title: "Alert", message: title, preferredStyle: .alert)
+        present(alert, animated: true)
+    }
 }

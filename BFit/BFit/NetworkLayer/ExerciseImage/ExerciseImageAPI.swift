@@ -11,12 +11,12 @@ import Alamofire
 
 // protocol oriented
 protocol ExerciseImageAPIProtocol {
-    func getExcerciseImageData(completion: @escaping (Swift.Result<ExcerciseImagesResponse?, AFError>)-> Void)
+    func getExcerciseImageData(completion: @escaping (Swift.Result<ExcerciseImagesResponse?, APIError>)-> Void)
 }
 
 class ExerciseImageAPI: BaseApi<ExerciseImageNetworking>, ExerciseImageAPIProtocol{
     // MARK: - Requests
-    func getExcerciseImageData(completion: @escaping (Swift.Result<ExcerciseImagesResponse?, AFError>)-> Void) {
+    func getExcerciseImageData(completion: @escaping (Swift.Result<ExcerciseImagesResponse?, APIError>)-> Void) {
         self.fetchData(target: .getExerciseImageData, responseClass: ExcerciseImagesResponse.self) { (result) in
             completion(result)
         }
