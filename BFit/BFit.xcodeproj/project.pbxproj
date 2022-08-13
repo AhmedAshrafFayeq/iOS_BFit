@@ -41,6 +41,8 @@
 		5B5558A828953FC900102E87 /* Bundle+UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558A728953FC900102E87 /* Bundle+UnitTest.swift */; };
 		5B5558AB2895400600102E87 /* ExerciseAPIMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B5558AA2895400600102E87 /* ExerciseAPIMock.json */; };
 		5B5558AD289564CA00102E87 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5558AC289564CA00102E87 /* SettingsView.swift */; };
+		5B934F7528A7B437000D9AB2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B934F7428A7B437000D9AB2 /* APIError.swift */; };
+		5B934F7628A7B43A000D9AB2 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B934F7428A7B437000D9AB2 /* APIError.swift */; };
 		5BDDDE0C289581B400C2F228 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE0B289581B400C2F228 /* UIViewController+Extension.swift */; };
 		5BDDDE0E289598EB00C2F228 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE0D289598EB00C2F228 /* BaseViewModel.swift */; };
 		5BDDDE102895BE6100C2F228 /* MockExercsieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE0F2895BE6100C2F228 /* MockExercsieAPI.swift */; };
@@ -134,6 +136,7 @@
 		5B5558A728953FC900102E87 /* Bundle+UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+UnitTest.swift"; sourceTree = "<group>"; };
 		5B5558AA2895400600102E87 /* ExerciseAPIMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExerciseAPIMock.json; sourceTree = "<group>"; };
 		5B5558AC289564CA00102E87 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5B934F7428A7B437000D9AB2 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		5BDDDE0B289581B400C2F228 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		5BDDDE0D289598EB00C2F228 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		5BDDDE0F2895BE6100C2F228 /* MockExercsieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExercsieAPI.swift; sourceTree = "<group>"; };
@@ -267,6 +270,7 @@
 			children = (
 				5B16B127289032BC00AF42D9 /* BaseAPI.swift */,
 				5B16B129289032D900AF42D9 /* TargetType.swift */,
+				5B934F7428A7B437000D9AB2 /* APIError.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -628,6 +632,7 @@
 				5BDDDE40289615D800C2F228 /* HomeHeaderView.swift in Sources */,
 				5B16B140289068EA00AF42D9 /* ExerciseImageAPI.swift in Sources */,
 				5B16B104288F149500AF42D9 /* SceneDelegate.swift in Sources */,
+				5B934F7528A7B437000D9AB2 /* APIError.swift in Sources */,
 				5B145CCA28943AE6001A6F4B /* SettingsViewController.swift in Sources */,
 				5B16B14A2892229100AF42D9 /* ExerciseImageCollectionViewCell.swift in Sources */,
 				5BDDDE0E289598EB00C2F228 /* BaseViewModel.swift in Sources */,
@@ -665,6 +670,7 @@
 				5BDDDE282895C4DD00C2F228 /* UIViewController+Extension.swift in Sources */,
 				5BDDDE1E2895C47500C2F228 /* ExerciseInfoAPI.swift in Sources */,
 				5BDDDE352896019700C2F228 /* ExerciseImageAPITest.swift in Sources */,
+				5B934F7628A7B43A000D9AB2 /* APIError.swift in Sources */,
 				5BDDDE152895BEDA00C2F228 /* TargetType.swift in Sources */,
 				5BDDDE432896A79300C2F228 /* ExerciseViewModelTest.swift in Sources */,
 				5BDDDE452896A95500C2F228 /* HomeHeaderView.swift in Sources */,

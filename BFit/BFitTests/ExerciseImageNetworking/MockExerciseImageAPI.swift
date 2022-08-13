@@ -10,7 +10,7 @@ import Alamofire
 
 class MockExerciseImageAPI: ExerciseImageAPIProtocol {
     
-    func getExcerciseImageData(completion: @escaping (Result<ExcerciseImagesResponse?, AFError>) -> Void) {
+    func getExcerciseImageData(completion: @escaping (Result<ExcerciseImagesResponse?, APIError>) -> Void) {
         guard let bundlePath =  Bundle.unitTest.path(forResource: "ImageAPIMock", ofType: "json") else {
             return
         }

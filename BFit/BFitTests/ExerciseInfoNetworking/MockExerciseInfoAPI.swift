@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class MockExerciseInfoAPI: ExerciseInfoAPIProtocol {
-    func getExcerciseInfoData(completion: @escaping (Result<ExerciseInfoResponse?, AFError>) -> Void) {
+    func getExcerciseInfoData(completion: @escaping (Result<ExerciseInfoResponse?, APIError>) -> Void) {
         guard let bundlePath =  Bundle.unitTest.path(forResource: "ExerciseInfoAPIMock", ofType: "json") else {
             return
         }

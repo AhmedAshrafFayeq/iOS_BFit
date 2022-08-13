@@ -10,7 +10,7 @@ import Alamofire
 
 class MockExercsieAPI: ExercisesAPIProtocol {
     
-    func getExcerciseData(completion: @escaping (Swift.Result<ExerciseResponse?, AFError>)-> Void) {
+    func getExcerciseData(completion: @escaping (Swift.Result<ExerciseResponse?, APIError>)-> Void) {
         
         guard let bundlePath =  Bundle.unitTest.path(forResource: "ExerciseAPIMock", ofType: "json") else {
             return
