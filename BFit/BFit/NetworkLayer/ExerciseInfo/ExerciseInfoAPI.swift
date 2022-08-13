@@ -11,12 +11,12 @@ import Alamofire
 
 // protocol oriented
 protocol ExerciseInfoAPIProtocol {
-    func getExcerciseInfoData(completion: @escaping (Swift.Result<ExerciseInfoResponse?, AFError>)-> Void)
+    func getExcerciseInfoData(completion: @escaping (Swift.Result<ExerciseInfoResponse?, APIError>)-> Void)
 }
 
 class ExerciseInfoAPI: BaseApi<ExerciseInfoNetworking>, ExerciseInfoAPIProtocol{
     // MARK: - Requests
-    func getExcerciseInfoData(completion: @escaping (Swift.Result<ExerciseInfoResponse?, AFError>)-> Void) {
+    func getExcerciseInfoData(completion: @escaping (Swift.Result<ExerciseInfoResponse?, APIError>)-> Void) {
         self.fetchData(target: .getExerciseInfoData, responseClass: ExerciseInfoResponse.self) { (result) in
             completion(result)
         }
