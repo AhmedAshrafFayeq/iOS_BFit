@@ -12,7 +12,7 @@ import RxCocoa
 import Alamofire
 
 protocol HomeViewControllerProtocol {
-    func showAlert(with title: String)
+    func showAlert(with AlertMsg: String)
 }
 
 class HomeViewController: UIViewController {
@@ -114,9 +114,10 @@ extension HomeViewController : UITableViewDelegate {
 }
 
 extension HomeViewController: HomeViewControllerProtocol {
-    func showAlert(with title: String) {
+    func showAlert(with AlertMsg: String) {
         self.hideLoading()
-        let alert = UIAlertController(title: "Alert", message: title, preferredStyle: .alert)
+        let alertTitle = "ALERT_TITLE".localized(forLanguageCode: NSLocale.preferredLanguages[0])
+        let alert = UIAlertController(title: alertTitle, message: AlertMsg, preferredStyle: .alert)
         present(alert, animated: true)
     }
 }

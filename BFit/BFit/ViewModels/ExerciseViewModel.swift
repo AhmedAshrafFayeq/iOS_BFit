@@ -78,7 +78,7 @@ extension ExerciseViewModel: ExerciseViewModelProtocol {
                 
             case .failure(let error):
                 DispatchQueue.main.async {
-                    self.view?.showAlert(with: error.rawValue)
+                    self.view?.showAlert(with: error.description)
                 }
             }
         })

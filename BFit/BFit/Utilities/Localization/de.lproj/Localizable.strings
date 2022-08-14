@@ -16,3 +16,10 @@
 "SETTINGS_TITLE" = "Einstellungen";
 "CHANGE_LANGUAGE" = "Sprache ändern";
 "CHOOSE_LANGUAGE" = "Wählen Sie die Sprache für die BFit";
+
+/* API Error*/
+"NO_INTERNET_CONNECTION" = "Bitte überprüfen Sie die Internetverbindung";
+"ERROR_DATA" = "Keine Daten gefunden oder Seite entfernt";
+
+/* Home View Controller*/
+"ALERT_TITLE" = "Alarm";
