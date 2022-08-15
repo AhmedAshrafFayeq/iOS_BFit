@@ -142,10 +142,6 @@ class ExerciseDetailViewController: UIViewController {
             placeholderImageView.topAnchor.constraint(equalTo: exerciseNameLabel.bottomAnchor,constant: 20),
             placeholderImageView.heightAnchor.constraint(equalToConstant: 300),
             
-            imageCollectionView.leadingAnchor.constraint(equalTo: scrollContentView.leadingAnchor,constant: 20),
-            imageCollectionView.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor,constant: -20),
-            imageCollectionView.topAnchor.constraint(equalTo: placeholderImageView.bottomAnchor,constant: 20),
-            
             exerciseDescriptionLabel.leadingAnchor.constraint(equalTo: scrollContentView.leadingAnchor,constant: 20),
             exerciseDescriptionLabel.trailingAnchor.constraint(equalTo: scrollContentView.trailingAnchor,constant: -20),
             exerciseDescriptionLabel.topAnchor.constraint(equalTo: placeholderImageView.bottomAnchor,constant: 20),
