@@ -18,7 +18,7 @@ extension String {
         return NSLocalizedString(
             self,
             bundle: bundle,
-            value: " ",
+            value: "",
             comment: ""
         )
     }
