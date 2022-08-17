@@ -53,13 +53,13 @@ class HomeViewController: UIViewController {
         child = UIHostingController(rootView: HeaderView(showSettingsView: {
             self.didTabSettingsButton()
         }))
-        child?.view.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height )
-        // First, add the view of the child to the view of the parent
-        self.view.addSubview(child?.view ?? UIView())
-        // Then, add the child to the parent
-        self.addChild(child ?? UIHostingController<HeaderView>(rootView: HeaderView(showSettingsView: {
-            self.didTabSettingsButton()
-        })))
+        if let child = child {
+            child.view.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height )
+            // First, add the view of the child to the view of the parent
+            self.view.addSubview(child.view)
+            // Then, add the child to the parent
+            self.addChild(child)
+        }
     }
     //MARK: - Settings button method
     private func didTabSettingsButton() {
