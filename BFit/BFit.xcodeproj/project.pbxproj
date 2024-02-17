@@ -82,6 +82,7 @@
 		5BDDDE40289615D800C2F228 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE3F289615D800C2F228 /* HomeHeaderView.swift */; };
 		5BDDDE432896A79300C2F228 /* ExerciseViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE422896A79300C2F228 /* ExerciseViewModelTest.swift */; };
 		5BDDDE452896A95500C2F228 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDDE3F289615D800C2F228 /* HomeHeaderView.swift */; };
+		6DCB5C162B80DF3800C81373 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 6DCB5C152B80DF3800C81373 /* Factory */; };
 		9109A685C408FE62234E2F22 /* Pods_BFitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B028747C4817147153331C77 /* Pods_BFitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B718D59BF2369E2B958951D /* Pods_BFit.framework in Frameworks */,
+				6DCB5C162B80DF3800C81373 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +470,9 @@
 			dependencies = (
 			);
 			name = BFit;
+			packageProductDependencies = (
+				6DCB5C152B80DF3800C81373 /* Factory */,
+			);
 			productName = BFit;
 			productReference = 5B16B0FE288F149500AF42D9 /* BFit.app */;
 			productType = "com.apple.product-type.application";
@@ -520,6 +525,9 @@
 				de,
 			);
 			mainGroup = 5B16B0F5288F149500AF42D9;
+			packageReferences = (
+				6DCB5C142B80DF3800C81373 /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			productRefGroup = 5B16B0FF288F149500AF42D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -974,6 +982,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6DCB5C142B80DF3800C81373 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6DCB5C152B80DF3800C81373 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6DCB5C142B80DF3800C81373 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B16B0F6288F149500AF42D9 /* Project object */;
 }
