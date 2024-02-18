@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Factory
 
 protocol ExerciseViewModelProtocol {
     var exerciseBehaviorSubject: BehaviorSubject<[Exercise]> { get }
@@ -24,16 +25,14 @@ class ExerciseViewModel: BaseViewModel {
     //MARK: - Variables
     var images = [Image]()
     var exercises = [Exercise]()
-    var exerciseAPI: ExercisesAPIProtocol?
-    var exerciseImageAPI: ExerciseImageAPIProtocol?
+    @Injected(\.exerciseAPI) var exerciseAPI
+    @Injected(\.exerciseImageAPI) var exerciseImageAPI
     var homeModelList = [HomeModel]()
     var view: HomeViewControllerProtocol?
     
     //MARK: - Initializer
-    init(exerciseAPI: ExercisesAPIProtocol = ExercisesAPI(), exerciseImageAPI: ExerciseImageAPIProtocol = ExerciseImageAPI()) {
+    override init() {
         super.init()
-        self.exerciseAPI = exerciseAPI
-        self.exerciseImageAPI = exerciseImageAPI
         combineExerciseData()
     }
 }
@@ -53,7 +52,7 @@ extension ExerciseViewModel: ExerciseViewModelProtocol {
     }
     
     func getExerciseData(completion : @escaping (Bool)-> Void) {
-        exerciseAPI?.getExcerciseData { (result) in
+        exerciseAPI.getExcerciseData { (result) in
             switch result{
             case .success(let response):
                 
@@ -69,7 +68,7 @@ extension ExerciseViewModel: ExerciseViewModelProtocol {
     }
     
     func getExerciseImages(completion : @escaping (Swift.Result<Bool, APIError>)-> Void) {
-        exerciseImageAPI?.getExcerciseImageData(completion: { (result) in
+        exerciseImageAPI.getExcerciseImageData(completion: { (result) in
             switch result{
             case .success(let response):
                 self.images = response?.results ?? []

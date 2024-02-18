@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Factory
 
 protocol ExerciseDetailViewModelProtocol {
     var exerciseInfoBehaviorSubject: BehaviorSubject<[Image]> { get }
@@ -15,16 +16,10 @@ protocol ExerciseDetailViewModelProtocol {
 }
 
 class ExerciseDetailViewModel: BaseViewModel {
-    
     //MARK: - Variables
     var exerciseImages = [Image]()
-    var exerciseInfoAPI: ExerciseInfoAPIProtocol?
+    @Injected(\.exerciceInfo) var exerciseInfoAPI
     
-    //MARK: - Initialzer
-    init(exerciseAPI: ExerciseInfoAPIProtocol = ExerciseInfoAPI()) {
-        super.init()
-        self.exerciseInfoAPI = exerciseAPI
-    }
 }
 
 //MARK: - Extention for ExerciseDetailViewModelProtocol
@@ -34,7 +29,7 @@ extension ExerciseDetailViewModel: ExerciseDetailViewModelProtocol {
     }
     
     func getExerciseInfoData(completion: @escaping (Bool) -> Void) {
-        exerciseInfoAPI?.getExcerciseInfoData(completion: { (result) in
+        exerciseInfoAPI.getExcerciseInfoData(completion: { (result) in
             switch result{
             case .success(let response):
                 

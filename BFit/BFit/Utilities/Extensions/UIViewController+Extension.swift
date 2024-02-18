@@ -13,11 +13,11 @@ extension UIViewController {
     func showLoading() {
         ProgressHUD.colorAnimation = .appThemeColor()
         ProgressHUD.colorProgress = .appThemeColor()
-        ProgressHUD.show()
+//        ProgressHUD.show()
     }
     
     func hideLoading() {
-        ProgressHUD.showSucceed()
+//        ProgressHUD.showSucceed()
         ProgressHUD.dismiss()
     }
 }
