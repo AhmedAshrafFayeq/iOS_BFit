@@ -8,6 +8,7 @@
 import XCTest
 import RxSwift
 import RxCocoa
+import Factory
 @testable import BFit
 
 class ExerciseInfoAPITest: XCTestCase {
@@ -17,7 +18,8 @@ class ExerciseInfoAPITest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        exerciseDetailViewModel = ExerciseDetailViewModel(exerciseAPI: MockExerciseInfoAPI())
+        Container.shared.exerciceInfo.register {MockExerciseInfoAPI()}
+        
     }
 
     override func tearDownWithError() throws {
